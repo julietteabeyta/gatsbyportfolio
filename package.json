@@ -5,18 +5,25 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "contentful": "^7.8.2",
+    "contentful-import": "^7.5.1",
     "gatsby": "^2.13.34",
     "gatsby-image": "^2.2.6",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.2",
     "gatsby-plugin-sharp": "^2.2.9",
+    "gatsby-source-contentful": "^2.1.15",
     "gatsby-source-filesystem": "^2.1.6",
+    "gatsby-transformer-remark": "^2.6.9",
     "gatsby-transformer-sharp": "^2.2.4",
+    "net": "^1.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.0.1",
+    "tls": "0.0.1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
