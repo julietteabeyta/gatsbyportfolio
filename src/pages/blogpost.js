@@ -3,13 +3,13 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogPost = ({ location, post }) => {
-  console.log('this is your locartion and your post ', location, post);
+const BlogPost = ({ location }) => {
+
+  const post = location.state.post;
   return (<Layout>
-    <SEO title="About" />
-    <div className="about section">
-      {location.state.post.body}
+    <SEO title={location.state.description} />
+    <div className="about section" dangerouslySetInnerHTML={{ __html: `${post}` }}>
     </div>
-  </Layout>)
+  </Layout >)
 }
 export default BlogPost

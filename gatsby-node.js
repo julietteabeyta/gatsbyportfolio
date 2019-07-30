@@ -7,8 +7,8 @@
 // You can delete this file if you're not using it
 const path = require('path')
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
   return new Promise((resolve, reject) => {
     const storeTemplate = path.resolve('src/pages/blogpost.js')
     resolve(

@@ -13,11 +13,11 @@ class Blog extends React.Component {
     console.log('These are your posts ', posts);
     let blogpostlinks = [];
     posts.forEach((post, index) => {
-      blogpostlinks.push(<Link to={`/${post.node.slug}`} state={{ post: post.node.body }} key={post.node.slug}>{post.node.description.description}</Link>)
+      blogpostlinks.push(<Link to={`/${post.node.slug}`} state={{ post: post.node.body.childMarkdownRemark.html, description: post.node.description.description }} key={post.node.slug}>{post.node.title}</Link>)
     });
     return (
       <>
-        <Router history>
+        <Router>
           <Layout>
             <SEO title="Blog" />
             <p>This will be the project description</p>
@@ -40,7 +40,9 @@ export const pageQuery = graphql`
           title
           slug
         body {
-          body
+          childMarkdownRemark {
+            html
+          }
         }
         description {
           description
