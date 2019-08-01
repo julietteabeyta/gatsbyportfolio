@@ -6,21 +6,29 @@ import get from 'lodash/get'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogPost from "./blogpost"
+import blogheader from "../images/blogheader.jpg"
 
 class Blog extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    console.log('These are your posts ', posts);
     let blogpostlinks = [];
     posts.forEach((post, index) => {
-      blogpostlinks.push(<Link to={`/${post.node.slug}`} state={{ post: post.node.body.childMarkdownRemark.html, description: post.node.description.description }} key={post.node.slug}>{post.node.title}</Link>)
+      blogpostlinks.push(<div key={index}><Link to={`/${post.node.slug}`} state={{ post: post.node.body.childMarkdownRemark.html, description: post.node.description.description, title: post.node.title, image: post.node.heroImage }}>{post.node.title}</Link></div>)
     });
+
     return (
       <>
         <Router>
           <Layout>
             <SEO title="Blog" />
-            <p>This will be the project description</p>
+            <img src={blogheader} alt="Green plant with a dark background" className="blog-header" />
+            <h1>Get To Know A Little</h1>
+            <p>Hello & welcome to my mini blog series!
+            Each week I will relay the information I have obtained
+            on various topics. This is an attempt at furthering my
+            understanding of familiar, yet wholly unknown concepts,
+            theories, technologies, phenomena, and things of the like.
+            </p>
             {blogpostlinks}
           </Layout>
           <Route path="/blog/:id" component={BlogPost} />
@@ -41,10 +49,19 @@ export const pageQuery = graphql`
           slug
         body {
           childMarkdownRemark {
-            html
-          }
-        }
-        description {
+        html
+      }
+    }
+          heroImage {
+          description
+            fixed(width: 1600) {
+          width
+              height
+        src
+        srcSet
+      }
+    }
+          description {
           description
         }
         }
