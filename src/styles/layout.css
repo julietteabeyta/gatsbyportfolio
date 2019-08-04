@@ -5,59 +5,42 @@ html {
   background: #fff;
 }
 body {
-  margin: 25px 0;
+  margin: 0px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-a {
-  color: red;
-  text-decoration: none;
-  -webkit-text-decoration-skip: objects;
 }
 li{
   list-style: none;
 }
-.contact{
-  width: 50%;
-}
-.contact{
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-auto-flow: column;
-}
-.contact-icon{
-  display: block;
-  height: 4vmin;
-}
-.contact-title{
-  display: none;
-}
-.about{
-  font-size: 25px;
-}
-.about a {
+a {
   color: black;
   text-decoration: none;
   position: relative;
   -webkit-text-decoration-skip: objects;
 }
-.about a::after{
+a::after{
   content:'';
   height: 25%;
   width: 100%;
   position: absolute;
   background: #ff2000;
-  opacity: .3;
+  opacity: .35;
   left: 0%;
   bottom: 20%;
   transition: all .2s ease;
 }
-.about a:hover::after{
+a:hover::after{
   content:'';
   height: 5%;
 }
 .header-image{
   display: none;
+}
+.contact{
+  margin: 10px 0;
+}
+.about{
+  font-size: 25px;
 }
 .subsection{
   margin-bottom: 50px;
@@ -65,19 +48,8 @@ li{
 .subsection-header{
   margin: 0;
 }
-.blog-image{
-  width: 100%;
-}
-.blog-header{
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+
 @media only screen and (min-width:768px) {
-  body{
-    margin: 0;
-  }
   .left{
     position: fixed;
     width: 40vmin;
@@ -98,16 +70,5 @@ li{
   .header-image{
     height: 45vmin;
     display: block;
-  }
-  .contact{
-    display: flex;
-    flex-direction: column;
-  }
-  .contact-icon{
-    display: none;
-  }
-  .contact-title{
-    display: block;
-    margin: 0;
   }
 }
