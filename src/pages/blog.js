@@ -23,7 +23,7 @@ class Blog extends React.Component {
           state={{ post: post.node.body.childMarkdownRemark.html, description: post.node.description.description, title: post.node.title, image: post.node.heroImage }}
           className="blog-entry">
           <img src={post.node.heroImage.fixed.src} alt={post.node.heroImage.description} />
-          <div className="blog-entry-title">{post.node.title}</div>
+          <div className="blog-entry-title"><b>{post.node.title}</b><p>{post.node.description.description}</p></div>
         </Link>);
     });
 
