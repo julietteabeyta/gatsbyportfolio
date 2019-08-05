@@ -20,7 +20,7 @@ const IndexPage = () => (
           alt="Three dimensional rendering of glasses floating above a wooden table"
           className="header-image"
         />
-        <div class="leftbar-contact">
+        <div className="leftbar-contact">
           <Contact />
         </div>
       </div>

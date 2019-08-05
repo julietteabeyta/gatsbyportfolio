@@ -16,7 +16,7 @@ const BlogPost = ({ location }) => {
 
   let img = [];
   if (imageobj && imageobj.fixed && imageobj.fixed.src && imageobj.description) {
-    img.push(<img src={imageobj.fixed.src} alt={imageobj.description} className="blog-post blog-image" />)
+    img.push(<img src={imageobj.fixed.src} alt={imageobj.description} key="0" className="blog-post blog-image" />)
   }
   return (
     <div className="blog">
