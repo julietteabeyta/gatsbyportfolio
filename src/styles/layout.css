@@ -48,6 +48,12 @@ a:hover::after{
 .subsection-header{
   margin: 0;
 }
+.subsection.contact{
+  display: block;
+}
+.leftbar-contact{
+  display: none;
+}
 
 @media only screen and (min-width:768px) {
   .left{
@@ -69,6 +75,12 @@ a:hover::after{
   }
   .header-image{
     height: 45vmin;
+    display: block;
+  }
+  .subsection.contact{
+    display: none;
+  }
+  .leftbar-contact{
     display: block;
   }
 }

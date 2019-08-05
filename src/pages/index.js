@@ -20,11 +20,17 @@ const IndexPage = () => (
           alt="Three dimensional rendering of glasses floating above a wooden table"
           className="header-image"
         />
-        <Contact />
+        <div class="leftbar-contact">
+          <Contact />
+        </div>
       </div>
       <div className="right">
         <About />
         <div className="subsections">
+          <div className="subsection contact">
+            <p className="subsection-header">Contact:</p>
+            <Contact />
+          </div>
           <div className="subsection skills">
             <p className="subsection-header">Superpowers:</p>
             <Skills />
