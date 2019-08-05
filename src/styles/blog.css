@@ -1,6 +1,7 @@
 .blog-image{
   width: 100%;
-
+  position: fixed;
+  z-index: 1;
 }
 .blog-header{
   position: relative;
@@ -9,11 +10,14 @@
 .blog-nav{
   position: absolute;
   margin: 25px;
+  position: fixed;
+  z-index: 2;
 }
 .blog-nav img{
   height: 35px;
 }
 .blog-nav a{
+  z-index: 1;
   font-size: 15px;
   color: #fff;
 }
@@ -39,6 +43,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 25px;
+  font-size: 13px;
 }
 .blog-entry{
   display: grid;
@@ -52,18 +58,41 @@
    -webkit-filter: grayscale(1);
   filter: grayscale(1);
 }
+.blog-entry-image{
+  overflow: hidden;
+}
 .blog-entry-title{
   margin-left: 20px;
 }
-
+.blog-body{
+  width: auto;
+  position: absolute;
+  margin-top: 30%;
+  padding: 50px 50px;
+  background: #fff;
+}
+.blog-entry-image-container{
+  overflow: hidden;
+}
+.blog-entry-image{
+  transform: scale(1);
+  transition: all .2s ease;
+}
+ .blog-entry-image.blog-entry-image-zoom{
+  transform: scale(1.3);
+}
+.blog-post.blog-image{
+  margin-top: -35%;
+}
 @media only screen and (min-width:768px) {
   .blog-body{
-    max-width: 50%;
+    width: 50%;
     position: absolute;
     left: 50%;
-    margin-top: -100px;
+    margin-top: 150px;
     margin-left: calc(-25% - 50px);
     padding: 50px 50px;
     background: #fff;
+    z-index: 3;
   }
 }
