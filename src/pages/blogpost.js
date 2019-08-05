@@ -1,13 +1,19 @@
 import React from "react"
 import { Link } from "gatsby";
 import SEO from "../components/seo"
+import NotFound from "./404"
 
 
 const BlogPost = ({ location }) => {
 
+  if (!location.state || !location.state.post) {
+    return (< NotFound />)
+  }
+
   const post = location.state.post;
   const imageobj = location.state.image;
   const title = location.state.title;
+
   let img = [];
   if (imageobj && imageobj.fixed && imageobj.fixed.src && imageobj.description) {
     img.push(<img src={imageobj.fixed.src} alt={imageobj.description} className="blog-post blog-image" />)
