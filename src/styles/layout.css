@@ -26,7 +26,7 @@ a::after{
   background: #ff2000;
   opacity: .35;
   left: 0%;
-  bottom: 20%;
+  bottom: 18%;
   transition: all .2s ease;
 }
 a:hover::after{
