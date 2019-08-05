@@ -48,7 +48,6 @@
 }
 .blog-entry{
   display: grid;
-  grid-template-columns: 1fr 1fr; 
   max-width: 100%;
   margin: 15px;
   align-items: center;
@@ -62,7 +61,8 @@
   overflow: hidden;
 }
 .blog-entry-title{
-  margin-left: 20px;
+  margin-left: 0px;
+  margin-top: 15px;
 }
 .blog-body{
   width: auto;
@@ -84,6 +84,7 @@
 .blog-post.blog-image{
   margin-top: -35%;
 }
+
 @media only screen and (min-width:768px) {
   .blog-body{
     width: 50%;
@@ -94,5 +95,15 @@
     padding: 50px 50px;
     background: #fff;
     z-index: 3;
+  }
+}
+
+@media only screen and (min-width: 540px){
+  .blog-entry{
+    grid-template-columns: 1fr 1fr;
+  }
+  .blog-entry-title{
+    margin-left: 20px;
+    margin-top: 0px;
   }
 }
