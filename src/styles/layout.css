@@ -51,6 +51,9 @@ a:hover::after{
 .subsection.contact{
   display: block;
 }
+.subsection>.contact{
+  margin-top: 0;
+}
 .leftbar-contact{
   display: none;
 }
