@@ -23,7 +23,7 @@ const BlogPost = ({ location }) => {
       <SEO title={location.state.description} />
       <div className="blog-header">
         <div className="blog-nav">
-          <Link to="/blog">Back</Link>
+          <Link to="/blog" className="back-button"> {'<-'} </Link>
         </div>
         {img}
       </div>

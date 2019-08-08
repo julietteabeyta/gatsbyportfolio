@@ -1,3 +1,14 @@
+h1, b, h3{
+  font-family: 'Playfair Display', serif;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.blog-home a::after,.blog-nav a::after {
+  content: '';
+  display: none;
+}
+
 .blog-image{
   width: 100%;
   position: fixed;
@@ -14,23 +25,11 @@
   z-index: 2;
 }
 .blog-nav img{
-  height: 35px;
+  height: 45px;
 }
 .blog-nav a{
   z-index: 1;
   color: #fff;
-}
-.blog a::after{
-  content: '';
-  display: none;
-}
-.blog-header h1 {
-  position: absolute;
-  text-transform: uppercase;
-  letter-spacing: 15px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -150%);
 }
 .blog-body{
   position: relative;
@@ -53,13 +52,13 @@
 }
 .blog-entry img{
   max-width: 100%;
-   -webkit-filter: grayscale(1);
+  -webkit-filter: grayscale(1);
   filter: grayscale(1);
 }
 .blog-entry-image{
   overflow: hidden;
 }
-.blog-entry-title{
+.blog-entry-details-container{
   margin-left: 0px;
   margin-top: 15px;
 }
@@ -83,6 +82,24 @@
 .blog-post.blog-image{
   margin-top: -35%;
 }
+.blog-entry-title.blog-entry-title-hover::after{
+  content:'';
+  height: 0%;
+}
+
+.blog-nav>a.back-button{
+  padding: 0 13px 6px 11px;
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+  background: white;
+  color: black;
+  transition: all .2s ease;
+  &:hover{
+    background: black;
+    color: white;
+
+  }
+}
 
 @media only screen and (min-width:768px) {
   .blog-body{
@@ -101,7 +118,7 @@
   .blog-entry{
     grid-template-columns: 1fr 1fr;
   }
-  .blog-entry-title{
+  .blog-entry-details-container{
     margin-left: 20px;
     margin-top: 0px;
   }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap');
+
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   -ms-text-size-adjust: 100%;
@@ -12,22 +14,22 @@ body {
 li{
   list-style: none;
 }
-a {
+.blog-entry-title, a {
   color: black;
   text-decoration: none;
   position: relative;
   -webkit-text-decoration-skip: objects;
-}
-a::after{
-  content:'';
-  height: 25%;
-  width: 100%;
-  position: absolute;
-  background: #ff2000;
-  opacity: .35;
-  left: 0%;
-  bottom: 18%;
-  transition: all .2s ease;
+  &::after{
+    content:'';
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    background: #ff2000;
+    opacity: .35;
+    left: 0%;
+    bottom: 14%;
+    transition: all .2s ease;
+  }
 }
 a:hover::after{
   content:'';
@@ -44,15 +46,15 @@ a:hover::after{
 }
 .subsection{
   margin-bottom: 50px;
+  &.contact{
+    display: block;
+  }
+  .contact{
+    margin-top: 0;
+  }
 }
 .subsection-header{
   margin: 0;
-}
-.subsection.contact{
-  display: block;
-}
-.subsection>.contact{
-  margin-top: 0;
 }
 .leftbar-contact{
   display: none;
@@ -73,15 +75,17 @@ a:hover::after{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .subsection.work{
-    margin-left: -15px;
+  .subsection{
+    &.work{
+      margin-left: -15px;      
+    }
+    &.contact{
+      display: none;
+    }
   }
   .header-image{
     height: 45vmin;
     display: block;
-  }
-  .subsection.contact{
-    display: none;
   }
   .leftbar-contact{
     display: block;
