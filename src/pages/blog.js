@@ -62,11 +62,13 @@ class Blog extends React.Component {
         </div>
         <div className="blog-body">
           <h1>Hello!</h1>
-          <p>Welcome to my mini blog series!
-          Each week I will relay the information I have obtained
-          on various topics. This is an attempt at furthering my
-          understanding of familiar, yet wholly unknown concepts,
-          theories, technologies, phenomena, and things of the like.
+          <p>Each week I will relay the information I have obtained on various
+            topics. This is an attempt at furthering my understanding of familiar,
+            yet wholly unknown concepts, theories, technologies, phenomena, and
+            things of the like. In many cases, I am seeking to learn something
+            specific about a higher-level topic. I am not an expert on these
+            subjects, but I will do my best to let you know what it is I sought
+            to learn and what I gained in my research.
             </p>
           <div className="blog-entries">
             {blogpostlinks}
