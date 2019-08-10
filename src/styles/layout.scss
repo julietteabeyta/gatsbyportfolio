@@ -19,13 +19,14 @@ li{
   text-decoration: none;
   position: relative;
   -webkit-text-decoration-skip: objects;
+  margin-bottom: 10px;
   &::after{
     content:'';
     height: 25%;
     width: 100%;
     position: absolute;
     background: #ff2000;
-    opacity: .35;
+    opacity: .3;
     left: 0%;
     bottom: 14%;
     transition: all .2s ease;
@@ -33,7 +34,8 @@ li{
 }
 a:hover::after{
   content:'';
-  height: 5%;
+  height: 90%;
+  bottom: 0;
 }
 .header-image{
   display: none;

@@ -102,7 +102,10 @@ h1, b, h3{
 }
 .blog-entry-title.blog-entry-title-hover::after{
   content:'';
-  height: 0%;
+  height: 100%;
+  width: 105%;
+  margin-left: -5px;
+  bottom: -2px;
 }
 
 @media only screen and (min-width:768px) {
