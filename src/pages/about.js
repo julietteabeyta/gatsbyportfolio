@@ -3,8 +3,9 @@ import { Link } from "gatsby"
 
 const About = () => (
   <div className="about show-on-scroll">
+    <h1>Hey! It's me, Juliette.</h1>
     <p>
-      Hey! It's me, Juliette. I am your average role-playing, coffee-drinking lover of all things horror.
+      I am your average role-playing, coffee-drinking lover of all things horror.
       I currently manage a full-stack development team focusing on writing modular, scalable
       code and perpetuating an inclusive, supportive culture. As a developer, I have a passion
       for building seamless interactions and creating useful, beautiful digital experiences.

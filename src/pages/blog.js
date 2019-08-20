@@ -4,63 +4,41 @@ import get from 'lodash/get'
 
 import "../styles/blog.scss"
 
+import Layout from "../components/layout"
 import SEO from "../components/seo"
-import blogheader from "../images/blogheader.jpg"
-import jsaIcon from "../images/jsa-icon.png"
+import jsaIcon from "../images/jsaBlackLogo.png"
 
 class Blog extends React.Component {
-
-  onMouseEnter(e) {
-    const index = e.currentTarget.id.split('-')[1];
-    const blogEntryImageID = `blog-entry-image-${index}`;
-    const blogEntryTitleID = `blog-entry-title-${index}`;
-    let blogEntryImage = document.getElementById(blogEntryImageID);
-    let blogEntryTitle = document.getElementById(blogEntryTitleID);
-    blogEntryImage.classList.add('blog-entry-image-zoom');
-    blogEntryTitle.classList.add('blog-entry-title-hover');
-  }
-
-  onMouseLeave(e) {
-    const index = e.currentTarget.id.split('-')[1];
-    const blogEntryImageID = `blog-entry-image-${index}`;
-    const blogEntryTitleID = `blog-entry-title-${index}`;
-    let blogEntryImage = document.getElementById(blogEntryImageID);
-    let blogEntryTitle = document.getElementById(blogEntryTitleID);
-    blogEntryImage.classList.remove('blog-entry-image-zoom');
-    blogEntryTitle.classList.remove('blog-entry-title-hover');
-  }
 
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     let blogpostlinks = [];
     posts.forEach((post, index) => {
       blogpostlinks.push(
-        <Link
-          key={index}
-          to={`/blog/${post.node.slug}`}
-          state={{ post: post.node.body.childMarkdownRemark.html, description: post.node.description.description, title: post.node.title, image: post.node.heroImage }}
-          className="blog-entry"
-          id={`entry-${index}`}
-          onMouseEnter={(e) => this.onMouseEnter(e)}
-          onMouseLeave={(e) => this.onMouseLeave(e)}
-        >
-          <div className="blog-entry-image-container">
-            <img src={post.node.heroImage.fixed.src} alt={post.node.heroImage.description} className="blog-entry-image" id={`blog-entry-image-${index}`} />
-          </div>
-          <div className="blog-entry-details-container"><div><h3 className="blog-entry-title" id={`blog-entry-title-${index}`}>{post.node.title}</h3></div><p>{post.node.description.description}</p></div>
-        </Link>);
+        <>
+          <Link
+            key={index}
+            to={`/blog/${post.node.slug}`}
+            state={{ post: post.node.body.childMarkdownRemark.html, description: post.node.description.description, title: post.node.title, image: post.node.heroImage }}
+            className="blog-entry"
+            id={`entry-${index}`}
+          >
+            {post.node.title}
+          </Link>
+          <p>{post.node.description.description}</p>
+        </>
+      );
     });
 
     return (
-      <div className="blog blog-home">
+      <Layout className="blog-home">
         <SEO title="Blog" />
-        <div className="blog-header">
-          <div className="blog-nav">
+        <div className="header">
+          <div className="nav">
             <Link to="/"><img src={jsaIcon} alt="Juliette Icon" /></Link>
           </div>
-          <img src={blogheader} alt="Green plant with a dark background" className="blog-image" />
         </div>
-        <div className="blog-body">
+        <div className="content-body">
           <h1>Hello!</h1>
           <p>Each week I will relay the information I have obtained on various
             topics. This is an attempt at furthering my understanding of familiar,
@@ -74,7 +52,7 @@ class Blog extends React.Component {
             {blogpostlinks}
           </div>
         </div>
-      </div>
+      </Layout>
     );
   }
 }
