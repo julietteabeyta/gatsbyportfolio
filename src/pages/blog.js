@@ -31,28 +31,22 @@ class Blog extends React.Component {
     });
 
     return (
-      <Layout className="blog-home">
-        <SEO title="Blog" />
+      <>
         <div className="header">
           <div className="nav">
             <Link to="/"><img src={jsaIcon} alt="Juliette Icon" /></Link>
           </div>
         </div>
-        <div className="content-body">
-          <h1>Hello!</h1>
-          <p>Each week I will relay the information I have obtained on various
-            topics. This is an attempt at furthering my understanding of familiar,
-            yet wholly unknown concepts, theories, technologies, phenomena, and
-            things of the like. In many cases, I am seeking to learn something
-            specific about a higher-level topic. I am not an expert on these
-            subjects, but I will do my best to let you know what it is I sought
-            to learn and what I gained in my research.
-            </p>
-          <div className="blog-entries">
-            {blogpostlinks}
+        <Layout className="blog-home">
+          <SEO title="Blog" />
+          <div className="content-body">
+            <h1>Hello!</h1>
+            <div className="blog-entries">
+              {blogpostlinks}
+            </div>
           </div>
-        </div>
-      </Layout>
+        </Layout>
+      </>
     );
   }
 }

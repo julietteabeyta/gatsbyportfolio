@@ -15,7 +15,7 @@ const About = () => (
     </p>
     <p>
       In addition to development, I have started a small <Link to="/blog">blog</Link> in which I document information on
-      miscellaneous topics I have researched that week to help me grow personally and professionally.
+      miscellaneous topics I have researched each week to help me grow personally and professionally.
       I also enjoy reading, cooking good vegan food, and taking long walks on the beach.
       And I am always looking to connect! You can reach me most easily on <a href="https://twitter.com/julietteabeyta" target="_blank" rel="noopener noreferrer" aria-describedby="link-new-window">twitter</a>, but feel free to shoot me an email <a href="mailto:julietteabeyta@gmail.com" rel="noopener noreferrer" target="_blank" aria-describedby="link-new-window">here.</a>
     </p>

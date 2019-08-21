@@ -1,4 +1,4 @@
-.blog-home a::after,.nav a::after {
+.blog-home a::after,.nav a::after, .contact a::after {
   content: '';
   display: none;
 }
@@ -23,16 +23,4 @@
 .blog-entries{
   margin-top: 25px;
 }
-.blog-entry{
-  display: grid;
-}
 
-@media only screen and (min-width: 540px){
-  .blog-entry{
-    grid-template-columns: 1fr 1fr;
-  }
-  .blog-entry-details-container{
-    margin-left: 20px;
-    margin-top: 0px;
-  }
-}
