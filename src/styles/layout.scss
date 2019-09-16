@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap");
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background: #fff;
@@ -10,19 +11,30 @@ body {
   margin: 0px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
-h1, b, h3, a{
+h1,
+b,
+h3,
+a {
   font-weight: bold;
   display: inline-block;
   margin-bottom: 0;
 }
 
-li{
+h1 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+li {
   list-style: none;
 }
 
-svg{
+svg {
   display: none;
 }
 
@@ -31,10 +43,10 @@ a {
   position: relative;
   font-weight: 600;
   margin-bottom: 0;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   z-index: 0;
-  &::after{
-    content:'';
+  &::after {
+    content: "";
     height: 0%;
     width: 100%;
     position: absolute;
@@ -42,44 +54,44 @@ a {
     left: 0;
     bottom: 2px;
     z-index: -1;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
   }
-  &:hover{
+  &:hover {
     color: white;
     text-decoration: none;
-    &::after{
-      content:'';
-      height: 90%;
-      bottom: 0;
+    &::after {
+      content: "";
+      height: 80%;
+      bottom: 2px;
     }
   }
 }
-.content-body{
+.content-body {
   width: auto;
   padding: 50px;
 }
-.subsection{
-  margin: 75px 0;
+.subsection {
+  margin-bottom: 50px;
 }
-.contact{
+.contact {
   display: flex;
 }
-.contact img{
+.contact img {
   height: 25px;
   margin-right: 20px;
 }
 @keyframes dash {
-  100%{
+  100% {
     stroke-dashoffset: 0;
     stroke: black;
   }
 }
 
-@media only screen and (min-width:1199px) {
-  .content-body{
+@media only screen and (min-width: 1199px) {
+  .content-body {
     padding: 50px;
   }
-  svg{
+  svg {
     display: block;
     position: fixed;
     height: 300px;
@@ -94,4 +106,3 @@ a {
     animation: dash 2.5s linear forwards;
   }
 }
-

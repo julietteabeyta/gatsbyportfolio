@@ -1,26 +1,25 @@
-.blog-home a::after,.nav a::after, .contact a::after {
-  content: '';
+#home-nav::after,
+.contact a::after {
+  content: "";
   display: none;
 }
-.nav{
+.nav {
   text-align: center;
   margin: 10px;
   height: 45px;
   position: fixed;
   z-index: 2;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
-.nav img{
+.nav img {
   height: 45px;
 }
-.nav a{
+.nav a {
   z-index: 1;
-  color: black;
   text-decoration: underline;
   justify-self: start;
 }
-.blog-entries{
+.blog-entries {
   margin-top: 25px;
 }
-
