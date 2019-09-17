@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import get from "lodash/get"
-
 import "../styles/blog.scss"
 
 import Layout from "../components/layout"
@@ -9,14 +8,37 @@ import SEO from "../components/seo"
 import jsaIcon from "../images/jsaBlackLogo.png"
 
 class Blog extends React.Component {
-  render() {
-    console.log("Hello we get to the blog page!!!")
-    const posts = get(this, "props.data.allContentfulBlogPost.edges")
-    let blogpostlinks = []
-    if (!posts) {
-      return ""
+  constructor(props) {
+    super(props)
+    this.state = {
+      blogPosts: [],
     }
-    posts.forEach((post, index) => {
+  }
+  componentDidMount() {
+    const { posts } = this.props
+    if (posts) {
+      this.setState({ blogPosts: posts })
+    }
+  }
+  componentDidUpdate(prevProps) {
+    const { posts } = this.props
+    if (posts && posts.length && posts !== prevProps.posts) {
+      this.setState({ blogPosts: posts })
+    }
+  }
+  fetchBlogPosts() {
+    const blogPosts = get(this, "props.data.allContentfulBlogPost.edges")
+    this.setState({ blogPosts })
+  }
+  render() {
+    const { inBody } = this.props
+    const { blogPosts } = this.state
+    if (!blogPosts || !blogPosts.length) {
+      this.fetchBlogPosts()
+    }
+
+    let blogpostlinks = []
+    blogPosts.forEach((post, index) => {
       blogpostlinks.push(
         <React.Fragment key={index}>
           <h3>
@@ -41,20 +63,26 @@ class Blog extends React.Component {
 
     return (
       <>
-        <div className="header">
-          <div className="nav">
-            <Link id="home-nav" to="/">
-              <img src={jsaIcon} alt="Juliette Icon" />
-            </Link>
-          </div>
-        </div>
-        <Layout className="blog-home">
-          <SEO title="Blog" />
-          <div className="content-body">
-            <h1>Hello!</h1>
-            <div className="blog-entries">{blogpostlinks}</div>
-          </div>
-        </Layout>
+        {!inBody ? (
+          <>
+            <div className="header">
+              <div className="nav">
+                <Link id="home-nav" to="/">
+                  <img src={jsaIcon} alt="Juliette Icon" />
+                </Link>
+              </div>
+            </div>
+            <Layout className="blog-home">
+              <SEO title="Blog" />
+              <div className="content-body">
+                {!inBody && <h1>TIL: The Blog</h1>}
+                <div className="blog-entries">{blogpostlinks}</div>
+              </div>
+            </Layout>
+          </>
+        ) : (
+          <div className="blog-entries">{blogpostlinks}</div>
+        )}
       </>
     )
   }

@@ -1,39 +1,44 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+:root {
+  --color-light: #ebeae9;
+  --color-mid: #9e9e9e;
+  --color-neutral: #1c1c1c;
+}
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Inter var", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background: #fff;
 }
 body {
   margin: 0px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  color: var(--color-neutral);
+  counter-reset: section;
 }
 h1,
 b,
 h3,
 a {
-  font-weight: bold;
+  font-weight: 670;
   display: inline-block;
   margin-bottom: 0;
 }
 
 h1 {
   margin: 0;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 3rem;
 }
 
 h3 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 li {
@@ -64,14 +69,19 @@ a {
   font-family: "Inconsolata", monospace;
 }
 .project-date,
+.blog-date {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--color-mid);
+}
 .project-tags {
   font-size: 12px;
-  color: grey;
+  color: var(--color-mid);
   text-transform: uppercase;
 }
 .project-tag {
   font-size: 10px;
-  border: 1px solid grey;
+  border: 1px solid var(--color-mid);
   margin-right: 10px;
   border-radius: 4px;
   padding: 2px 5px 2.5px;
@@ -79,7 +89,7 @@ a {
 }
 .introduction,
 .conclusion {
-  font-size: 1.35rem;
+  font-size: 1.75rem;
   line-height: 1.95rem;
 }
 .about-text .about-placeholder {
@@ -93,7 +103,7 @@ a {
   display: flex;
   align-items: center;
   .contact-handle {
-    color: grey;
+    color: var(--color-mid);
     font-size: 15px;
   }
 }
@@ -116,10 +126,10 @@ a {
       margin-top: 0;
     }
     .about-placeholder {
+      height: 100%;
       display: block;
       width: calc(100% - 20px);
-      height: 100%;
-      background: grey;
+      background: var(--color-mid);
       padding-left: 20px;
     }
   }
