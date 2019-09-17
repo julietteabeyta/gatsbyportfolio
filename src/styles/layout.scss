@@ -58,7 +58,7 @@ a {
   padding: 50px;
 }
 .subsection {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 .project {
   margin-bottom: 25px;
@@ -70,17 +70,17 @@ a {
 }
 .project-date,
 .blog-date {
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: uppercase;
   color: var(--color-mid);
 }
 .project-tags {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--color-mid);
   text-transform: uppercase;
 }
 .project-tag {
-  font-size: 10px;
+  font-size: 0.625rem;
   border: 1px solid var(--color-mid);
   margin-right: 10px;
   border-radius: 4px;
@@ -92,8 +92,37 @@ a {
   font-size: 1.75rem;
   line-height: 1.95rem;
 }
-.about-text .about-placeholder {
+.about-placeholder {
   display: none;
+}
+.subsection.blog {
+  display: flex;
+  flex-direction: column;
+}
+.read-more {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 400;
+  position: relative;
+  text-align: end;
+  &::before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    top: calc(50% - 2px);
+    left: 100%;
+    background-color: #000;
+    position: absolute;
+  }
+  &::after {
+    content: "";
+    width: 26px;
+    height: 2px;
+    bottom: 2px;
+    left: calc(100% - 1px);
+    background-color: #000;
+    position: absolute;
+  }
 }
 .contact img {
   height: 25px;

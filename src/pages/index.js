@@ -34,10 +34,10 @@ class IndexPage extends React.Component {
                   <h2>Things I've Made</h2>
                   <Work />
                 </div>
-                <div className="subsection work">
+                <div className="subsection blog">
                   <h2>Things I've Written</h2>
                   <Blog posts={posts} inBody />
-                  <Link id="blog" to="/blog">
+                  <Link className="read-more" to="/blog">
                     Read More
                   </Link>
                 </div>

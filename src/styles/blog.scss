@@ -1,8 +1,3 @@
-#home-nav::after,
-.contact a::after {
-  content: "";
-  display: none;
-}
 .nav {
   text-align: center;
   margin: 10px;
@@ -21,5 +16,5 @@
   justify-self: start;
 }
 .blog-entries {
-  margin-top: 25px;
+  margin: 25px 0 50px;
 }
