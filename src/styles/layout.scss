@@ -34,6 +34,27 @@ h1 {
 
 h2 {
   font-size: 3rem;
+  position: relative;
+  &::before {
+    counter-increment: section;
+    content: "0" counter(section);
+    font-size: 0.625rem;
+    font-weight: 400;
+    top: calc(50% - 2px);
+    left: -60px;
+    position: absolute;
+    color: var(--color-mid);
+    font-family: "Inconsolata", monospace;
+  }
+  &::after {
+    content: "";
+    width: 35px;
+    height: 1px;
+    top: calc(50% + 3px);
+    left: -45px;
+    background-color: var(--color-mid);
+    position: absolute;
+  }
 }
 
 h3 {
