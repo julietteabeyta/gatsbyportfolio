@@ -1,18 +1,48 @@
 import React from "react"
-import atSymbol from '../images/atSymbol.svg';
-import twitter from '../images/twitter.svg';
-import linkedIn from '../images/linkedIn.svg';
-import github from '../images/github.svg';
-import codepen from '../images/codepen.svg';
+import ContactLink from "../components/contactLink"
+import twitter from "../images/twitter.svg"
+import linkedIn from "../images/linkedIn.svg"
+import github from "../images/github.svg"
+import codepen from "../images/codepen.svg"
 
 const Contact = () => (
   <div className="contact section">
-    <div><a href="mailto:julietteabeyta@gmail.com" target="_blank" rel="noopener noreferrer" aria-describedby="link-new-window"><img src={atSymbol} alt="Black at symbol" /></a></div>
-    <div><a href="https://twitter.com/julietteabeyta" target="_blank" rel="noopener noreferrer" aria-describedby="link-new-window"><img src={twitter} alt="Black Twitter bird logo" /></a></div>
-    <div><a href="https://www.linkedin.com/in/juliette-abeyta-90b761162/" target="_blank" rel="noopener noreferrer" aria-describedby="link-new-window"><img src={linkedIn} alt="Black LinkedIn logo" /></a></div>
-    <div><a href="https://github.com/julietteabeyta" target="_blank" rel="noopener noreferrer" aria-describedby="link-new-window"><img src={github} alt="Black GitHub octocat logo" /></a></div>
-    <div><a href="https://codepen.io/julietteabeyta" target="_blank" rel="noopener noreferrer" aria-describedby="link-new-window"><img src={codepen} alt="Black CodePen Logo" /></a></div>
-    <span id="link-new-window" hidden>Opens in a new window</span>
+    <p className="conclusion">
+      Thank you so much for stopping by. I am most available on twitter, but you
+      can check out all of the other places I have been on the internet. Hope to
+      hear from you soon!
+    </p>
+    <ContactLink
+      url="https://twitter.com/julietteabeyta"
+      imgsrc={twitter}
+      linkName="Twitter"
+      handle="@julietteabeyta"
+      altText="Black Twitter bird logo"
+    />
+    <ContactLink
+      url="https://www.linkedin.com/in/juliette-abeyta-90b761162/"
+      imgsrc={linkedIn}
+      linkName="LinkedIn"
+      handle="/in/juliette-abeyta-90b761162"
+      altText="Black LinkedIn Logo"
+    />
+    <ContactLink
+      url="https://github.com/julietteabeyta"
+      imgsrc={github}
+      linkName="GitHub"
+      handle="@julietteabeyta"
+      altText="Black GitHub octocat logo"
+    />
+    <ContactLink
+      url="https://codepen.io/julietteabeyta"
+      imgsrc={codepen}
+      linkName="CodePen"
+      handle="@julietteabeyta"
+      altText="Black CodePen logo"
+    />
+    <span id="link-new-window" hidden>
+      Opens in a new window
+    </span>
   </div>
 )
 

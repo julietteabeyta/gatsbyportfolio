@@ -1,38 +1,28 @@
 import React from "react"
-
+import Project from "../components/project"
 const SecondPage = () => (
   <div className="work section">
-    <p>
-      Most of my side project hustle has been focused on a Table Top RPG{" "}
-      <a
-        href="http://crit.fail"
-        rel="noopener noreferrer"
-        target="_blank"
-        aria-describedby="link-new-window"
-      >
-        companion app
-      </a>
-      , and building applications centered on my learnings from my blog
-      endeavors, such as a{" "}
-      <a
-        href="http://crit.fail"
-        rel="noopener noreferrer"
-        target="_blank"
-        aria-describedby="link-new-window"
-      >
-        Fibonacci Generator
-      </a>
-      . Also be sure to check out my most recent employment of Three.js in my{" "}
-      <a
-        href="https://halloween.juliette.dev"
-        rel="noopener noreferrer"
-        target="_blank"
-        aria-describedby="link-new-window"
-      >
-        Halloween Countdown
-      </a>{" "}
-      site.
-    </p>
+    <Project
+      url="http://crit.fail"
+      title="Initiative"
+      date="05.19-present"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      tags={["Javascript"]}
+    />
+    <Project
+      url="https://fibonacci.juliette.dev"
+      title="Fibonacci Generator"
+      date="06.19"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      tags={["React", "Leadership"]}
+    />
+    <Project
+      url="https://halloween.juliette.dev"
+      title="Halloween Countdown"
+      date="04.19"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      tags={["React", "Three.js", "Javascript"]}
+    />
     <span id="link-new-window" hidden>
       Opens in a new window
     </span>

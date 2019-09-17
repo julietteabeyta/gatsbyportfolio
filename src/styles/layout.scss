@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -11,7 +11,7 @@ body {
   margin: 0px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 h1,
 b,
@@ -24,10 +24,16 @@ a {
 
 h1 {
   margin: 0;
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.2rem;
 }
 
 h3 {
   margin: 0;
+  font-size: 1.5rem;
 }
 
 li {
@@ -40,31 +46,7 @@ svg {
 
 a {
   color: black;
-  position: relative;
-  font-weight: 600;
-  margin-bottom: 0;
-  transition: all 0.2s ease;
-  z-index: 0;
-  &::after {
-    content: "";
-    height: 0%;
-    width: 100%;
-    position: absolute;
-    background: black;
-    left: 0;
-    bottom: 2px;
-    z-index: -1;
-    transition: all 0.2s ease;
-  }
-  &:hover {
-    color: white;
-    text-decoration: none;
-    &::after {
-      content: "";
-      height: 80%;
-      bottom: 2px;
-    }
-  }
+  text-decoration: none;
 }
 .content-body {
   width: auto;
@@ -73,12 +55,47 @@ a {
 .subsection {
   margin-bottom: 50px;
 }
-.contact {
-  display: flex;
+.project {
+  margin-bottom: 25px;
+  padding-right: 15px;
+}
+.project-date,
+.contact-handle {
+  font-family: "Inconsolata", monospace;
+}
+.project-date,
+.project-tags {
+  font-size: 12px;
+  color: grey;
+  text-transform: uppercase;
+}
+.project-tag {
+  font-size: 10px;
+  border: 1px solid grey;
+  margin-right: 10px;
+  border-radius: 4px;
+  padding: 2px 5px 2.5px;
+  display: inline-block;
+}
+.introduction,
+.conclusion {
+  font-size: 1.35rem;
+  line-height: 1.95rem;
+}
+.about-text .about-placeholder {
+  display: none;
 }
 .contact img {
   height: 25px;
   margin-right: 20px;
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  .contact-handle {
+    color: grey;
+    font-size: 15px;
+  }
 }
 @keyframes dash {
   100% {
@@ -87,22 +104,27 @@ a {
   }
 }
 
-@media only screen and (min-width: 1199px) {
+@media only screen and (min-width: 768px) {
   .content-body {
     padding: 50px;
   }
-  svg {
-    display: block;
-    position: fixed;
-    height: 300px;
-    bottom: -20px;
-    right: -20px;
-    transition: all 2s ease;
+  .about-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    p {
+      padding-right: 15px;
+      margin-top: 0;
+    }
+    .about-placeholder {
+      display: block;
+      width: calc(100% - 20px);
+      height: 100%;
+      background: grey;
+      padding-left: 20px;
+    }
   }
-  path {
-    stroke: black;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 2.5s linear forwards;
+  .work .section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }

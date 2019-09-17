@@ -5,11 +5,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/contact"
 import jsaIcon from "../images/jsaBlackLogo.png"
-import bust from "../images/bust.svg"
 import About from "./about"
 import Work from "./work"
-import Skills from "./skills"
-import Mentions from "./mentions"
+import Blog from "./blog"
 
 const IndexPage = () => (
   <>
@@ -29,18 +27,15 @@ const IndexPage = () => (
               <About />
             </div>
             <div className="subsection work">
-              <h3>Things I have worked on:</h3>
+              <h2>Things I've Made</h2>
               <Work />
             </div>
-            <div className="subsection skills">
-              <h3>Things I am good at:</h3>
-              <Skills />
-            </div>
-            <div className="subsection mentions">
-              <h3>Bonus!</h3>
-              <Mentions />
+            <div className="subsection work">
+              <h2>Things I've Written</h2>
+              <Blog />
             </div>
             <div className="subsection contact">
+              <h2>Get In Touch</h2>
               <Contact />
             </div>
           </div>

@@ -10,14 +10,17 @@ import jsaIcon from "../images/jsaBlackLogo.png"
 
 class Blog extends React.Component {
   render() {
+    console.log("Hello we get to the blog page!!!")
     const posts = get(this, "props.data.allContentfulBlogPost.edges")
     let blogpostlinks = []
+    if (!posts) {
+      return ""
+    }
     posts.forEach((post, index) => {
       blogpostlinks.push(
-        <>
+        <React.Fragment key={index}>
           <h3>
             <Link
-              key={index}
               to={`/blog/${post.node.slug}`}
               state={{
                 post: post.node.body.childMarkdownRemark.html,
@@ -32,7 +35,7 @@ class Blog extends React.Component {
             </Link>
           </h3>
           <p>{post.node.description.description}</p>
-        </>
+        </React.Fragment>
       )
     })
 
