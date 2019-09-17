@@ -82,7 +82,7 @@ export const pageQuery = graphql`
           description {
             description
           }
-          createdAt
+          publishDate
         }
       }
     }

@@ -36,31 +36,36 @@ class Blog extends React.Component {
     if (!blogPosts || !blogPosts.length) {
       this.fetchBlogPosts()
     }
-
     let blogpostlinks = []
+    let previewlinks = []
     blogPosts.forEach((post, index) => {
+      const { node } = post
+      const { publishDate } = node
+      const date = new Date(publishDate)
+      const month =
+        (date.getUTCMonth() + 1).toString().length === 1
+          ? "0" + (date.getUTCMonth() + 1).toString()
+          : (date.getUTCMonth() + 1).toString()
+      const year = date
+        .getUTCFullYear()
+        .toString()
+        .substr(-2)
       blogpostlinks.push(
         <React.Fragment key={index}>
           <h3>
-            <Link
-              to={`/blog/${post.node.slug}`}
-              state={{
-                post: post.node.body.childMarkdownRemark.html,
-                description: post.node.description.description,
-                title: post.node.title,
-                image: post.node.heroImage,
-              }}
-              className="blog-entry"
-              id={`entry-${index}`}
-            >
-              {post.node.title}
+            <Link to={`/blog/${node.slug}`} className="blog-entry">
+              {node.title}
             </Link>
           </h3>
-          <p>{post.node.description.description}</p>
+          <p className="blog-date">
+            {month}.{year}
+          </p>
+          <p>{node.description.description}</p>
         </React.Fragment>
       )
     })
 
+    previewlinks = [blogpostlinks[0], blogpostlinks[1], blogpostlinks[2]]
     return (
       <>
         {!inBody ? (
@@ -81,7 +86,7 @@ class Blog extends React.Component {
             </Layout>
           </>
         ) : (
-          <div className="blog-entries">{blogpostlinks}</div>
+          <div className="blog-entries">{previewlinks}</div>
         )}
       </>
     )
@@ -117,7 +122,7 @@ export const pageQuery = graphql`
           description {
             description
           }
-          createdAt
+          publishDate
         }
       }
     }
