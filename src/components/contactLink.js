@@ -3,7 +3,7 @@ import React from "react"
 const ContactLink = props => (
   <div className="contact-link">
     <a
-      href="https://twitter.com/julietteabeyta"
+      href={props.url}
       target="_blank"
       rel="noopener noreferrer"
       aria-describedby="link-new-window"
