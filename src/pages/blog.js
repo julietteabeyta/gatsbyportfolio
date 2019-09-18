@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import get from "lodash/get"
-import "../styles/blog.scss"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -60,7 +59,7 @@ class Blog extends React.Component {
           <p className="blog-date">
             {month}.{year}
           </p>
-          <p>{node.description.description}</p>
+          <p className="blog-description">{node.description.description}</p>
         </React.Fragment>
       )
     })
