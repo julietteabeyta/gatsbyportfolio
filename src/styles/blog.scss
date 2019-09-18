@@ -1,20 +1,3 @@
-.nav {
-  text-align: center;
-  margin: 10px;
-  height: 45px;
-  position: fixed;
-  z-index: 2;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-.nav img {
-  height: 45px;
-}
-.nav a {
-  z-index: 1;
-  text-decoration: underline;
-  justify-self: start;
-}
 .blog-entries {
   margin: 25px 0 50px;
 }

@@ -70,13 +70,6 @@ class Blog extends React.Component {
       <>
         {!inBody ? (
           <>
-            <div className="header">
-              <div className="nav">
-                <Link id="home-nav" to="/">
-                  <img src={jsaIcon} alt="Juliette Icon" />
-                </Link>
-              </div>
-            </div>
             <Layout className="blog-home">
               <SEO title="Blog" />
               <div className="content-body">

@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/contact"
-import jsaIcon from "../images/jsaBlackLogo.png"
 import About from "./about"
 import Work from "./work"
 import Blog from "./blog"
@@ -15,13 +14,6 @@ class IndexPage extends React.Component {
     const posts = get(this, "props.data.allContentfulBlogPost.edges")
     return (
       <>
-        <div className="header">
-          <div className="nav">
-            <Link id="home-nav" to="/">
-              <img src={jsaIcon} alt="Juliette Icon" />
-            </Link>
-          </div>
-        </div>
         <Layout>
           <SEO title="Home" />
           <div>

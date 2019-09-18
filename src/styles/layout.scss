@@ -74,6 +74,30 @@ a {
   color: black;
   text-decoration: none;
 }
+
+.nav {
+  text-align: center;
+  margin: 10px;
+  height: 55px;
+  position: fixed;
+  z-index: 2;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  #app-icon {
+    height: 50px;
+  }
+  .header-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50px;
+    img {
+      height: 25px;
+    }
+  }
+}
 .content-body {
   width: auto;
   padding: 50px;
