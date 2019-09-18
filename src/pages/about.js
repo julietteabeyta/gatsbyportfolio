@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import bust from "../images/bust.svg"
 
 const About = () => (
   <div className="about show-on-scroll">
@@ -18,6 +19,7 @@ const About = () => (
       . I'm looking for a new opportunity in California.
     </p>
     <div className="about-text">
+      <img src={bust} alt="Outline of Juliette" className="about-placeholder" />
       <div>
         <p>
           I am your average role-playing, coffee-drinking lover of all things
@@ -32,7 +34,6 @@ const About = () => (
           looking to connect!
         </p>
       </div>
-      <div className="about-placeholder"></div>
     </div>
     <span id="link-new-window" hidden>
       Opens in a new window

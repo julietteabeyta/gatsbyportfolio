@@ -7,7 +7,6 @@ import NotFound from "../pages/404"
 const BlogPost = props => {
   const post = props.data.contentfulBlogPost
   const title = post.title
-  const description = post.description
 
   return (
     <>
@@ -20,7 +19,7 @@ const BlogPost = props => {
       </div>
       <Layout>
         <div className="blog">
-          <SEO title={description} />
+          <SEO title={title} />
           <div
             className="content-body"
             dangerouslySetInnerHTML={{

@@ -14,7 +14,7 @@ html {
 }
 body {
   margin: 0px;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--color-neutral);
   counter-reset: section;
 }
@@ -29,11 +29,11 @@ a {
 
 h1 {
   margin: 0;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   position: relative;
   &::before {
     counter-increment: section;
@@ -59,7 +59,7 @@ h2 {
 
 h3 {
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 li {
@@ -92,12 +92,12 @@ a {
 }
 .project-date,
 .blog-date {
-  font-size: 1rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   color: var(--color-mid);
 }
 .project-tags {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--color-mid);
   text-transform: uppercase;
 }
@@ -111,11 +111,13 @@ a {
 }
 .introduction,
 .conclusion {
-  font-size: 1.75rem;
-  line-height: 1.95rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 .about-placeholder {
-  display: none;
+  height: 35vh;
+  display: block;
+  width: 100%;
 }
 .subsection.blog {
   display: flex;
@@ -130,8 +132,8 @@ a {
   &::before {
     content: "";
     width: 25px;
-    height: 2px;
-    top: calc(50% - 2px);
+    height: 1px;
+    top: calc(50% - 1px);
     left: 100%;
     background-color: #000;
     position: absolute;
@@ -139,7 +141,7 @@ a {
   &::after {
     content: "";
     width: 26px;
-    height: 2px;
+    height: 1px;
     bottom: 2px;
     left: calc(100% - 1px);
     background-color: #000;
@@ -172,16 +174,17 @@ a {
   .about-text {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: "column-1 column-2";
+    div {
+      grid-area: column-1;
+    }
     p {
       padding-right: 15px;
       margin-top: 0;
     }
     .about-placeholder {
-      height: 100%;
-      display: block;
-      width: calc(100% - 20px);
-      background: var(--color-mid);
-      padding-left: 20px;
+      height: 95%;
+      grid-area: column-2;
     }
   }
   .work .section {
