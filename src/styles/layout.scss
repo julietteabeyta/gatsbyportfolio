@@ -174,17 +174,13 @@ a {
   width: 100%;
 }
 
-.subsection.blog {
-  display: flex;
-  flex-direction: column;
-}
-
 .read-more {
   text-transform: uppercase;
   text-decoration: underline;
   font-weight: 400;
+  width: 100%;
   position: relative;
-  text-align: end;
+  text-align: right;
   margin-right: 25px;
   &::before {
     content: "";
