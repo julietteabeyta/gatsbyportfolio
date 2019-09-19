@@ -6,7 +6,7 @@ const About = () => (
   <div className="about show-on-scroll">
     <h1>Hey! It's me, Juliette.</h1>
     <p className="introduction">
-      I'm a front-end developer based in Denver, relocating to Los Angeles. I
+      I'm a full-stack developer based in Denver, relocating to Los Angeles. I
       currently lead a multidisciplinary team of engineering talent at{" "}
       <a
         href="https://fluentstream.com"
@@ -22,16 +22,18 @@ const About = () => (
       <img src={bust} alt="Outline of Juliette" className="about-placeholder" />
       <div>
         <p>
-          I am your average role-playing, coffee-drinking lover of all things
-          horror.
+          In over two years of slinging code, I have gained proficiencies in
+          various languages, specializing in JavaScript. I love writing
+          scalable, modular applications, and learning & optimizing along the
+          way.
         </p>
         <p>
-          In addition to development, I have started a small{" "}
-          <Link to="/blog">blog</Link> in which I document information on
-          miscellaneous topics I have researched each week to help me grow
-          personally and professionally. I also enjoy reading, cooking good
-          vegan food, and taking long walks on the beach. And I am always
-          looking to connect!
+          I am deeply passionate about expanding my knowledge in myriad
+          disciplines. In addition to development, I have started a small{" "}
+          <Link to="/blog">blog</Link> in which I exercise broadening my
+          knowledge on various topics. I also enjoy reading, cooking good vegan
+          food, and taking long walks on the beach. And I am always looking to
+          connect!
         </p>
       </div>
     </div>

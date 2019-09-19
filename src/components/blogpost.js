@@ -1,8 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "./layout"
 import SEO from "./seo"
-import NotFound from "../pages/404"
 
 const BlogPost = props => {
   const post = props.data.contentfulBlogPost
@@ -10,13 +8,6 @@ const BlogPost = props => {
 
   return (
     <>
-      <div className="header">
-        <div className="nav">
-          <a onClick={() => window.history.back()} className="back-button">
-            Back
-          </a>
-        </div>
-      </div>
       <Layout>
         <div className="blog">
           <SEO title={title} />

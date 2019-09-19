@@ -1,29 +1,5 @@
 import React from "react"
 
-const languages = ["JavaScript", "HTML5", "PHP7", "CSS3"]
-const libraries = [
-  "React",
-  "React Native",
-  "Redux",
-  "Backbone",
-  "jQuery",
-  "Material UI",
-  "BootStrap",
-  "SCSS",
-]
-const misc = [
-  "API/RESTful Architecture",
-  "SVG Animation",
-  "MySQL",
-  "MongoDB",
-  "Git",
-  "JIRA",
-  "Chrome Applications",
-  "XCode",
-  "Android Studio",
-  "Sketch",
-  "Agile Web Development",
-]
 const SecondPage = () => (
   <div className="section">
     <p>

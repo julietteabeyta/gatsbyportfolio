@@ -4,7 +4,6 @@ import get from "lodash/get"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import jsaIcon from "../images/jsaBlackLogo.png"
 
 class Blog extends React.Component {
   constructor(props) {
@@ -65,6 +64,7 @@ class Blog extends React.Component {
     })
 
     previewlinks = [blogpostlinks[0], blogpostlinks[1], blogpostlinks[2]]
+
     return (
       <>
         {!inBody ? (
@@ -72,7 +72,7 @@ class Blog extends React.Component {
             <Layout className="blog-home">
               <SEO title="Blog" />
               <div className="content-body">
-                {!inBody && <h1>TIL: The Blog</h1>}
+                {!inBody && <h1 className="blog-header">TIL: The Blog</h1>}
                 <div className="blog-entries">{blogpostlinks}</div>
               </div>
             </Layout>
