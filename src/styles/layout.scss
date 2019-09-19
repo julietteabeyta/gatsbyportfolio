@@ -5,7 +5,11 @@
   --color-mid: #9e9e9e;
   --color-neutral: #1c1c1c;
 }
-
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 html {
   font-family: "Inter var", sans-serif;
   -ms-text-size-adjust: 100%;
@@ -96,11 +100,10 @@ a {
   grid-auto-flow: column;
   justify-content: space-between;
   width: 100%;
-  padding-top: 50px;
+  padding: 50px calc(1.0875rem + 50px) 0;
   z-index: 2;
   #app-icon {
     height: 50px;
-    margin-left: calc(1.0875rem + 50px);
   }
   .header-contact {
     display: grid;
@@ -109,7 +112,6 @@ a {
     justify-items: end;
     height: 58px;
     width: 58px;
-    margin-right: calc(1.0875rem + 55px);
     img {
       height: 17px;
     }
@@ -181,22 +183,13 @@ a {
   width: 100%;
   position: relative;
   text-align: right;
-  margin-right: 25px;
+  margin-left: -25px;
   &::before {
     content: "";
     width: 25px;
     height: 1px;
     top: calc(50% - 1px);
     left: 100%;
-    background-color: var(--color-neutral);
-    position: absolute;
-  }
-  &::after {
-    content: "";
-    width: 26px;
-    height: 1px;
-    bottom: 2px;
-    left: calc(100% - 1px);
     background-color: var(--color-neutral);
     position: absolute;
   }
@@ -218,6 +211,26 @@ a {
 
 .blog-entries {
   margin: 25px 0;
+}
+
+.back-button {
+  font-weight: 400;
+  position: fixed;
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-left: -50px;
+  text-decoration: underline;
+  z-index: 2;
+  cursor: pointer;
+  &::before {
+    content: "";
+    width: 25px;
+    height: 1px;
+    top: calc(50% - 1px);
+    left: -25px;
+    background-color: var(--color-neutral);
+    position: absolute;
+  }
 }
 
 @keyframes dash {

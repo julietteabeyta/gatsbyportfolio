@@ -11,6 +11,9 @@ const BlogPost = props => {
       <Layout>
         <div className="blog">
           <SEO title={title} />
+          <a className="back-button" onClick={() => window.history.back()}>
+            go back
+          </a>
           <div
             className="content-body"
             dangerouslySetInnerHTML={{
