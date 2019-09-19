@@ -20,6 +20,15 @@ body {
   counter-reset: section;
 }
 
+.content-container {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+main {
+  padding: 0px 1.0875rem 1.45rem;
+}
+
 h1,
 b,
 h3,
@@ -88,12 +97,13 @@ a {
   z-index: 2;
   #app-icon {
     height: 50px;
+    margin-left: calc(1.0875rem + 50px);
   }
   .header-contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 50px;
-    // margin-right: 2.175rem;
+    margin-right: calc(1.0875rem + 55px);
     img {
       height: 25px;
     }
