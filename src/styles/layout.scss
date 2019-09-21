@@ -44,7 +44,7 @@ a {
 
 h1 {
   margin-top: 150px;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   &.blog-header {
     margin-bottom: 75px;
   }
@@ -216,20 +216,11 @@ a {
 .back-button {
   font-weight: 400;
   position: fixed;
-  text-transform: uppercase;
-  margin-top: 50px;
-  margin-left: -50px;
-  text-decoration: underline;
+  top: 60px;
   z-index: 2;
   cursor: pointer;
-  &::before {
-    content: "";
-    width: 25px;
-    height: 1px;
-    top: calc(50% - 1px);
-    left: -25px;
-    background-color: var(--color-neutral);
-    position: absolute;
+  img {
+    height: 30px;
   }
 }
 
@@ -264,5 +255,10 @@ a {
   .work .section {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 450px) {
+  h1 {
+    font-size: 3.5rem;
   }
 }

@@ -12,7 +12,7 @@ const BlogPost = props => {
         <div className="blog">
           <SEO title={title} />
           <a className="back-button" onClick={() => window.history.back()}>
-            go back
+            <img src={require("../images/backarrow.png")} alt="Back arrow" />
           </a>
           <div
             className="content-body"
