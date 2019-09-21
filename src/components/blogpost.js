@@ -11,9 +11,9 @@ const BlogPost = props => {
       <Layout>
         <div className="blog">
           <SEO title={title} />
-          <a className="back-button" onClick={() => window.history.back()}>
+          <button className="back-button" onClick={() => window.history.back()}>
             <img src={require("../images/backarrow.png")} alt="Back arrow" />
-          </a>
+          </button>
           <div
             className="content-body"
             dangerouslySetInnerHTML={{

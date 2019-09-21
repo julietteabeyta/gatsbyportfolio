@@ -219,6 +219,11 @@ a {
   top: 60px;
   z-index: 2;
   cursor: pointer;
+  background: transparent;
+  border: none;
+  &:focus {
+    outline: none;
+  }
   img {
     height: 30px;
   }
