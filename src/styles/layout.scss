@@ -57,7 +57,7 @@ h2 {
     counter-increment: section;
     content: "0" counter(section);
     font-size: 0.625rem;
-    font-weight: 400;
+    font-weight: normal;
     top: calc(50% - 2px);
     left: -60px;
     position: absolute;
@@ -179,7 +179,7 @@ a {
 .read-more {
   text-transform: uppercase;
   text-decoration: underline;
-  font-weight: 400;
+  font-weight: normal;
   width: 100%;
   position: relative;
   text-align: right;
@@ -204,6 +204,7 @@ a {
   display: flex;
   align-items: center;
   .contact-handle {
+    font-weight: normal;
     color: var(--color-mid);
     font-size: 15px;
   }
@@ -214,7 +215,6 @@ a {
 }
 
 .back-button {
-  font-weight: 400;
   position: fixed;
   top: 60px;
   z-index: 2;
