@@ -25,10 +25,6 @@ body {
   counter-reset: section;
 }
 
-main {
-  margin: 0px 1.0875rem 1.45rem;
-}
-
 h1,
 b,
 h3,
@@ -49,26 +45,6 @@ h1 {
 h2 {
   font-size: 2.25rem;
   position: relative;
-  &::before {
-    counter-increment: section;
-    content: "0" counter(section);
-    font-size: 0.625rem;
-    font-weight: normal;
-    top: calc(50% - 2px);
-    left: -60px;
-    position: absolute;
-    color: var(--color-mid);
-    font-family: "Inconsolata", monospace;
-  }
-  &::after {
-    content: "";
-    width: 35px;
-    height: 1px;
-    top: calc(50% + 3px);
-    left: -45px;
-    background-color: var(--color-mid);
-    position: absolute;
-  }
 }
 
 h3 {
@@ -105,7 +81,7 @@ a {
   grid-auto-flow: column;
   justify-content: space-between;
   width: 100%;
-  padding: 0 calc(1.0875rem + 50px);
+  padding: 0 20px;
   z-index: 2;
   #app-icon {
     height: 50px;
@@ -125,7 +101,7 @@ a {
 
 .content-body {
   width: auto;
-  margin: 50px;
+  margin: 20px;
 }
 
 .subsection {
@@ -270,5 +246,33 @@ a {
 @media only screen and (min-width: 450px) {
   h1 {
     font-size: 3rem;
+  }
+  h2 {
+    &::before {
+      counter-increment: section;
+      content: "0" counter(section);
+      font-size: 0.625rem;
+      font-weight: normal;
+      top: calc(50% - 2px);
+      left: -60px;
+      position: absolute;
+      color: var(--color-mid);
+      font-family: "Inconsolata", monospace;
+    }
+    &::after {
+      content: "";
+      width: 35px;
+      height: 1px;
+      top: calc(50% + 3px);
+      left: -45px;
+      background-color: var(--color-mid);
+      position: absolute;
+    }
+  }
+  .content-body {
+    margin: 65px;
+  }
+  .nav {
+    padding: 0 65px;
   }
 }
