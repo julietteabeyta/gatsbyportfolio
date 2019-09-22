@@ -12,6 +12,7 @@
 }
 html {
   font-family: "Inter var", sans-serif;
+  font-size: 20px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background: #ebeae9;
@@ -19,7 +20,7 @@ html {
 
 body {
   margin: 0px;
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: var(--color-neutral);
   counter-reset: section;
 }
@@ -100,7 +101,7 @@ a {
   grid-auto-flow: column;
   justify-content: space-between;
   width: 100%;
-  margin: 0 calc(1.0875rem + 50px);
+  padding: 0 calc(1.0875rem + 50px);
   z-index: 2;
   #app-icon {
     height: 50px;
@@ -129,7 +130,7 @@ a {
 
 .introduction,
 .conclusion {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.5;
 }
 
@@ -264,6 +265,6 @@ a {
 }
 @media only screen and (min-width: 450px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
