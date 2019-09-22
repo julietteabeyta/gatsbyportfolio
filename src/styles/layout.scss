@@ -196,7 +196,10 @@ a {
 
 .back-button {
   position: fixed;
-  top: 60px;
+  top: 30px;
+  margin-left: 0px;
+  left: 0;
+  padding: 0;
   z-index: 2;
   cursor: pointer;
   background: transparent;
@@ -274,5 +277,20 @@ a {
   }
   .nav {
     padding: 0 65px;
+  }
+  .back-button {
+    position: fixed;
+    top: 75px;
+    margin-left: 15px;
+    z-index: 2;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+    img {
+      height: 30px;
+    }
   }
 }
