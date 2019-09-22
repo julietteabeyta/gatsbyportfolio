@@ -14,7 +14,9 @@ To run this project, simply:
 npm install && npm start
 ```
 
-**NOTES:
+**NOTES:**
+
+- This project was created using [Gatsbyjs](https://www.gatsbyjs.org) . 
 
 - Blog content is sourced from [Contentful](https://www.contentful.com/) using the gasby-source-contentful package. Documentation for set up is [here](https://www.gatsbyjs.org/packages/gatsby-source-contentful/).
 - This project was created using [Gatsbyjs](https://www.gatsbyjs.org) . 
