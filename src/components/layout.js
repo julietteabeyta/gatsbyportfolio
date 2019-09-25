@@ -8,14 +8,15 @@ import twitter from "../images/twitter.svg"
 import linkedIn from "../images/linkedIn.svg"
 import github from "../images/github.svg"
 import codepen from "../images/codepen.svg"
+import AnimatedLink from "./transitionLink"
 
 const Layout = ({ children }) => {
   return (
     <div className="content-container">
       <div className="nav">
-        <Link id="home-nav" to="/">
+        <AnimatedLink id="home-nav" to="/">
           <img id="app-icon" src={jsaIcon} alt="Juliette Icon" />
-        </Link>
+        </AnimatedLink>
         <div className="header-contact">
           <a
             href="https://twitter.com/julietteabeyta"

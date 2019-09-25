@@ -8,6 +8,7 @@ import About from "./about"
 import Work from "./work"
 import Blog from "./blog"
 import get from "lodash/get"
+import AnimatedLink from "../components/transitionLink"
 
 class IndexPage extends React.Component {
   render() {
@@ -29,9 +30,9 @@ class IndexPage extends React.Component {
                 <div className="subsection blog">
                   <h2>Things I've Written</h2>
                   <Blog posts={posts} inBody />
-                  <Link className="read-more" to="/blog">
+                  <AnimatedLink className="read-more" to="/blog">
                     Read More
-                  </Link>
+                  </AnimatedLink>
                 </div>
                 <div className="subsection contact">
                   <h2>Get In Touch</h2>

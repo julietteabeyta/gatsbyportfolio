@@ -5,6 +5,7 @@ module.exports = {
     author: `Juliette Abeyta`,
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
@@ -38,9 +39,8 @@ module.exports = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [
-        ]
-      }
+        plugins: [],
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

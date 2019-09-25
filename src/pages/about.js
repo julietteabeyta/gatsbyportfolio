@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import bust from "../images/bust.svg"
+import anime from "animejs/lib/anime.es.js"
+import AnimatedLink from "../components/transitionLink"
 
 const About = () => (
   <div className="about show-on-scroll">
@@ -30,10 +32,10 @@ const About = () => (
         <p>
           I am deeply passionate about expanding my knowledge in myriad
           disciplines. In addition to development, I have started a small{" "}
-          <Link to="/blog">blog</Link> in which I exercise broadening my
-          knowledge on various topics. I also enjoy reading, cooking good vegan
-          food, and taking long walks on the beach. And I am always looking to
-          connect!
+          <AnimatedLink to="/blog">blog</AnimatedLink> in which I exercise
+          broadening my knowledge on various topics. I also enjoy reading,
+          cooking good vegan food, and taking long walks on the beach. And I am
+          always looking to connect!
         </p>
       </div>
     </div>

@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "animejs": "^3.1.0",
     "contentful": "^7.10.0",
     "contentful-import": "^7.6.0",
     "emergence.js": "^1.1.2",
@@ -15,6 +16,7 @@
     "gatsby-plugin-react-helmet": "^3.1.7",
     "gatsby-plugin-sass": "^2.1.14",
     "gatsby-plugin-sharp": "^2.2.24",
+    "gatsby-plugin-transition-link": "^1.13.0",
     "gatsby-source-contentful": "^2.1.38",
     "gatsby-source-filesystem": "^2.1.24",
     "gatsby-transformer-remark": "^2.6.23",

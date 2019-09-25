@@ -4,6 +4,7 @@ import get from "lodash/get"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import AnimatedLink from "../components/transitionLink"
 
 class Blog extends React.Component {
   constructor(props) {
@@ -51,9 +52,9 @@ class Blog extends React.Component {
       blogpostlinks.push(
         <React.Fragment key={index}>
           <h3>
-            <Link to={`/blog/${node.slug}`} className="blog-entry">
+            <AnimatedLink to={`/blog/${node.slug}`} className="blog-entry">
               {node.title}
-            </Link>
+            </AnimatedLink>
           </h3>
           <p className="blog-date">
             {month}.{year}
