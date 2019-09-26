@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import get from "lodash/get"
 
-import Layout from "../components/layout"
+import Layout from "../layouts"
 import SEO from "../components/seo"
 
 class Blog extends React.Component {

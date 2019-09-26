@@ -8,8 +8,9 @@ import twitter from "../images/twitter.svg"
 import linkedIn from "../images/linkedIn.svg"
 import github from "../images/github.svg"
 import codepen from "../images/codepen.svg"
+import Transition from "../components/transition"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   return (
     <div className="content-container">
       <div className="nav">
@@ -51,7 +52,9 @@ const Layout = ({ children }) => {
           </a>
         </div>
       </div>
-      <main>{children}</main>
+      <Transition location={location}>
+        <main>{children}</main>
+      </Transition>
     </div>
   )
 }

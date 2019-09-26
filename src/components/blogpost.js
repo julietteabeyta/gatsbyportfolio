@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "./layout"
+import Layout from "../layouts"
 import SEO from "./seo"
 
 const BlogPost = props => {
