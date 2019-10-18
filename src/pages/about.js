@@ -6,17 +6,16 @@ const About = () => (
   <div className="about show-on-scroll">
     <h1>Hey! It's me, Juliette.</h1>
     <p className="introduction">
-      I'm a full-stack developer based in Denver, relocating to Los Angeles. I
-      currently lead a multidisciplinary team of engineering talent at{" "}
+      I'm a full-stack developer based in Los Angeles, California. I work on a multidisciplinary team of engineering at{" "}
       <a
-        href="https://fluentstream.com"
+        href="https://evgo.com"
         target="_blank"
         rel="noopener noreferrer"
         aria-describedby="link-new-window"
       >
-        <b>FluentStream</b>
+        <b>EVgo</b>
       </a>
-      . I'm looking for a new opportunity in California.
+      .
     </p>
     <div className="about-text">
       <img src={bust} alt="Outline of Juliette" className="about-placeholder" />
