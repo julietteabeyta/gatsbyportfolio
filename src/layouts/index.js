@@ -1,14 +1,14 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
-import "../styles/layout.scss"
-import jsaIcon from "../images/jsaBlackLogo.png"
-import twitter from "../images/twitter.svg"
-import linkedIn from "../images/linkedIn.svg"
-import github from "../images/github.svg"
-import codepen from "../images/codepen.svg"
-import Transition from "../components/transition"
+import '../styles/layout.scss';
+import jsaIcon from '../images/jsaBlackLogo.png';
+import twitter from '../images/twitter.svg';
+import linkedIn from '../images/linkedIn.svg';
+import github from '../images/github.svg';
+import codepen from '../images/codepen.svg';
+import Transition from '../components/transition';
 
 const Layout = ({ children, location }) => {
   return (

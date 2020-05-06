@@ -11,13 +11,10 @@ const BlogPost = props => {
       <Layout>
         <div className="blog">
           <SEO title={title} />
-          <button className="back-button" onClick={() => window.history.back()}>
-            <img src={require("../images/backarrow.png")} alt="Back arrow" />
-          </button>
           <div
             className="content-body"
             dangerouslySetInnerHTML={{
-              __html: `<h1>${title}</h1><hr>${post.body.childMarkdownRemark.html}`,
+              __html: `<h1>${title}</h1>${post.body.childMarkdownRemark.html}`,
             }}
           ></div>
         </div>
