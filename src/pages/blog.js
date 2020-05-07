@@ -32,7 +32,7 @@ export default function Blog(props) {
       .toString()
       .substr(-2)
     blogpostlinks.push(
-      <React.Fragment key={index}>
+      <div key={index}>
         <h3>
           <Link to={`/blog/${slug}`} className="blog-entry">
             {title}
@@ -42,12 +42,11 @@ export default function Blog(props) {
           {month}.{year}
         </p>
         <p className="blog-description">{description.description}</p>
-      </React.Fragment>
+      </div>
     )
   })
 
-
-  return (<div className="blog-entries">{blogpostlinks}</div>)
+  return (<div className="blog-entries section">{blogpostlinks}</div>)
 }
 
 export const pageQuery = graphql`

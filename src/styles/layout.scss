@@ -119,13 +119,24 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 16px; // (or 1.142857143rem)
-  * {
+  h1, h2 {
     grid-column: 1 / span 7;
   }
-  div {
+  >div {
     grid-column: 2 / span 5;
 
   }
+}
+
+.blog-entries.section {
+  grid-column: 2 / span 7;
+}
+
+.work.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  grid-column: 2 / span 10;
 }
 
 .project {
@@ -143,10 +154,6 @@ a {
   font-size: 0.75rem;
   text-transform: uppercase;
   color: var(--color-mid);
-}
-
-.blog-description {
-  margin-bottom: 50px;
 }
 
 .project-tags {
