@@ -43,6 +43,9 @@ h1 {
   margin-bottom: 60px;
   text-transform: uppercase;
   line-height: .8;
+  // text-shadow: -.5px -.5px 0px red,
+  //               1px -1px 0px #00FFFF,
+  //              -.5px .5px 0px red;
   &::after {
     content: '';
     position: absolute;
@@ -120,23 +123,26 @@ a {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 16px; // (or 1.142857143rem)
   h1, h2 {
-    grid-column: 1 / span 7;
+    grid-column: 1 / span 6;
   }
   >div {
-    grid-column: 2 / span 5;
+    grid-column: 2 / span 4;
 
   }
 }
 
 .blog-entries.section {
-  grid-column: 2 / span 7;
+  grid-column: 2 / span 6;
 }
 
 .work.section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(10, 1fr);
   grid-gap: 16px;
   grid-column: 2 / span 10;
+  div {
+    grid-column-end: span 4;
+  }
 }
 
 .project {
@@ -223,10 +229,6 @@ a {
   }
 }
 
-.blog-entries {
-  margin: 25px 0;
-}
-
 .back-button {
   position: fixed;
   top: 30px;
@@ -247,7 +249,7 @@ a {
 @media only screen and (min-width: 450px) {
   h1 {
     font-size: 5rem;
-    line-height: .75;
+    line-height: .77;
   }
   h2 {
     font-size: 3rem;
