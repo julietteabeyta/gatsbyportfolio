@@ -60,6 +60,10 @@ h1 {
   }
 }
 
+.blog h1 {
+  font-size: 3rem;
+}
+
 h2 {
   font-size: 2rem;
   position: relative;
@@ -209,6 +213,10 @@ a {
     margin-top: 100px;
   }
 
+  .blog h1 {
+    font-size: 3.5rem;
+  }
+
   h2 {
     font-size: 3rem;
     line-height: .75;
@@ -262,6 +270,10 @@ a {
 @media only screen and (min-width: 768px) {
   h1 {
     font-size: 7rem;
+  }
+
+  .blog h1 {
+    font-size: 5rem;
   }
 
   h2 {

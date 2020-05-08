@@ -8,19 +8,15 @@ const BlogPost = props => {
   const title = post.title
 
   return (
-    <>
-      <Layout>
-        <div className="blog">
-          <SEO title={title} />
-          <div
-            className="content-body"
-            dangerouslySetInnerHTML={{
-              __html: `<h1>${title}</h1>${post.body.childMarkdownRemark.html}`,
-            }}
-          ></div>
-        </div>
-      </Layout>
-    </>
+    <div className="blog">
+      <SEO title={title} />
+      <div
+        className="content-body"
+        dangerouslySetInnerHTML={{
+          __html: `<h1>${title}</h1><div>${post.body.childMarkdownRemark.html}</div>`,
+        }}
+      ></div>
+    </div>
   )
 }
 export default BlogPost

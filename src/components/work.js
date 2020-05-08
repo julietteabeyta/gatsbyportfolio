@@ -27,7 +27,7 @@ const SecondPage = () => (
       url="https://halloween.juliette.dev"
       title="Halloween Countdown"
       date="04.19"
-      description="This aptly name countdown application is my most recent employment of Three.js. I also had the challenge of managing dates to calculate the time until Halloween regardless of year. It is never too early to check how long until the next All Hallows Eve. Happy haunting!"
+      description="This aptly name countdown application is my most recent employment of Three.js. I also had the challenge of managing dates to calculate the time until Halloween regardless of year. It is never too early to check how long until the next All Hallows Eve."
       tags={["React", "Three.js"]}
     />
     <span id="link-new-window" hidden>
