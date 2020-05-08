@@ -41,8 +41,8 @@ export default function About() {
             disciplines. In addition to development, I have started a small{" "}
             blog in which I exercise broadening my
             knowledge on various topics. I also enjoy reading, cooking good vegan
-            food, and taking long walks on the beach. And I am always looking to
-            connect!
+            food, and taking long walks on the beach. And I am always looking to {' '}
+            <a href="#contact">connect</a>!
           </p>
         </div>
       </div>

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import '../styles/layout.scss';
-import jsaIcon from '../images/jsaBlackLogo.png';
+import yellowIcon from '../images/FFFF00-logo.svg';
+import blueIcon from '../images/00FFFF-logo.svg';
+import pinkIcon from '../images/FF00FF-logo.svg';
 import twitter from '../images/twitter.svg';
 import linkedIn from '../images/linkedIn.svg';
 import github from '../images/github.svg';
@@ -15,7 +17,9 @@ const Layout = ({ children, location }) => {
     <div className="content-container">
       <div className="nav">
         <Link id="home-link" to="/">
-          <img id="app-icon" src={jsaIcon} alt="Juliette Icon" />
+          <img className="app-icon" id="yellow-icon" src={yellowIcon} alt="Juliette Icon" />
+          <img className="app-icon" id="blue-icon" src={blueIcon} alt="Juliette Icon" />
+          <img className="app-icon" id="pink-icon" src={pinkIcon} alt="Juliette Icon" />
         </Link>
         {!location.href.includes('blog/') &&
           <>

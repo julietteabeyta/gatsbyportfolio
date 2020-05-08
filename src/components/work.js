@@ -1,7 +1,7 @@
 import React from "react"
 import Project from "./project"
 const SecondPage = () => (
-  <div className="work section">
+  <>
     <Project
       url="http://crit.fail"
       title="Initiative"
@@ -33,7 +33,7 @@ const SecondPage = () => (
     <span id="link-new-window" hidden>
       Opens in a new window
     </span>
-  </div>
+  </>
 )
 
 export default SecondPage

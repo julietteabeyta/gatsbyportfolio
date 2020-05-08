@@ -4,12 +4,10 @@ exports.shouldUpdateScroll = ({
   routerProps: { location },
   getSavedScrollPosition,
 }) => {
-  if (location && location.action === "PUSH") {
-    window.setTimeout(() => window.scrollTo(0, 0), transitionDelay)
-  } else {
+  if (location.href.includes('/blog')) {
     const savedPosition = getSavedScrollPosition(location)
     window.setTimeout(
-      () => window.scrollTo(...(savedPosition || (0, 0))),
+      () => window.scrollTo({}, (savedPosition || (0, 0))),
       transitionDelay
     )
   }

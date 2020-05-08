@@ -12,7 +12,7 @@ const BlogPost = props => {
       <div
         className="content-body"
         dangerouslySetInnerHTML={{
-          __html: `<h1>${title}</h1><div>${post.body.childMarkdownRemark.html}</div>`,
+          __html: `<h1><span data-text="${title}">${title}</span></h1 > <div>${post.body.childMarkdownRemark.html}</div>`,
         }}
       ></div>
     </div>
@@ -45,4 +45,4 @@ export const pageQuery = graphql`
       createdAt
     }
   }
-`
+  `

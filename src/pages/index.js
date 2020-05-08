@@ -14,31 +14,31 @@ class IndexPage extends React.Component {
   render() {
     const posts = get(this, "props.data.allContentfulBlogPost.edges")
     return (
-      <div>
+      <>
         <SEO title={'Home'} />
         <ReactSVG src={wavy} className="svg-container svg-top" />
         <div className="content-body home">
           <div className="subsections">
             <div id="about" className="subsection about">
-              <h1>Juliette Abeyta</h1>
+              <h1><span data-text="Juliette Abeyta">Juliette Abeyta</span></h1>
               <About />
             </div>
             <div id="work" className="subsection work">
-              <h2>Things I've Made</h2>
+              <h2><span data-text="Things I've Made">Things I've Made</span></h2>
               <Work />
             </div>
             <div id="blog" className="subsection blog">
-              <h2>Things I've Written</h2>
+              <h2><span data-text="Things I've Written">Things I've Written</span></h2>
               <Blog posts={posts} inBody />
             </div>
             <div id="contact" className="subsection contact">
-              <h2>Get In Touch</h2>
+              <h2><span data-text="Get In Touch">Get In Touch</span></h2>
               <Contact />
             </div>
           </div>
         </div>
         <ReactSVG src={wavy} className="svg-container svg-bottom" />
-      </div>
+      </>
     )
   }
 }
