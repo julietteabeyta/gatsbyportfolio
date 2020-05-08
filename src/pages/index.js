@@ -1,11 +1,11 @@
 import React from "react"
 import ReactSVG from 'react-svg';
+import { graphql } from 'gatsby';
 
-import SEO from "../components/seo"
 import Contact from "../components/contact"
-import About from "./about"
-import Work from "./work"
-import Blog from "./blog"
+import About from "../components/about"
+import Work from "../components/work"
+import Blog from "../components/blog"
 import wavy from '../images/wavy.svg';
 import get from "lodash/get"
 
@@ -14,23 +14,23 @@ class IndexPage extends React.Component {
     const posts = get(this, "props.data.allContentfulBlogPost.edges")
     return (
       <>
-        <SEO title="Home" />
         <div>
           <ReactSVG src={wavy} className="svg-container svg-top" />
           <div className="content-body home">
             <div className="subsections">
-              <div className="subsection about">
+              <div id="about" className="subsection about">
+                <h1>Juliette Abeyta</h1>
                 <About />
               </div>
-              <div className="subsection work">
+              <div id="work" className="subsection work">
                 <h2>Things I've Made</h2>
                 <Work />
               </div>
-              <div className="subsection blog">
+              <div id="blog" className="subsection blog">
                 <h2>Things I've Written</h2>
                 <Blog posts={posts} inBody />
               </div>
-              <div className="subsection contact">
+              <div id="contact" className="subsection contact">
                 <h2>Get In Touch</h2>
                 <Contact />
               </div>

@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
 @import url("https://rsms.me/inter/inter.css");
+
 :root {
   --color-light: #ebeae9;
   --color-mid: #9e9e9e;
   --color-neutral: #1c1c1c;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
 html {
   font-family: "Inter var", sans-serif;
   font-size: 14px;
@@ -36,9 +39,9 @@ a {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   position: relative;
-  margin-top: 100px;
+  margin-top: 25px;
   padding-bottom: 25px;
   margin-bottom: 60px;
   text-transform: uppercase;
@@ -84,18 +87,18 @@ a {
 
 .content-container {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 850px;
 }
 
 .nav {
-  position: absolute;
-  max-width: 960px;
+  counter-reset: navigation;
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-  width: 100%;
-  padding: 0 20px;
-  z-index: 2;
+  margin: 50px 35px 0;
+  .nav-link {
+    display: none;
+  }
   #app-icon {
     height: 50px;
   }
@@ -103,7 +106,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-items: end;
+    justify-items: center;
     height: 58px;
     width: 58px;
     img {
@@ -113,8 +116,8 @@ a {
 }
 
 .content-body {
+  margin: 35px;
   width: auto;
-  margin: 20px;
 }
 
 .subsection {
@@ -126,22 +129,8 @@ a {
     grid-column: 1 / span 6;
   }
   >div {
-    grid-column: 2 / span 4;
+    grid-column: 2 / span 9;
 
-  }
-}
-
-.blog-entries.section {
-  grid-column: 2 / span 6;
-}
-
-.work.section {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-gap: 16px;
-  grid-column: 2 / span 10;
-  div {
-    grid-column-end: span 4;
   }
 }
 
@@ -184,33 +173,17 @@ a {
   position: fixed;
   z-index: -1;
   svg {
-    transform: scale(.75);
+    transform: scale(.5);
   }
   &.svg-top {
-    top: -35%;
+    top: -45%;
     right: 0;
+    svg {
+      transform: scale(1);
+    }
   }
   &.svg-bottom {
     display: none;
-  }
-}
-
-.read-more {
-  text-transform: uppercase;
-  text-decoration: underline;
-  font-weight: normal;
-  width: 100%;
-  position: relative;
-  text-align: right;
-  margin-left: -25px;
-  &::before {
-    content: "";
-    width: 25px;
-    height: 1px;
-    top: calc(50% - 1px);
-    left: 100%;
-    background-color: var(--color-neutral);
-    position: absolute;
   }
 }
 
@@ -229,34 +202,18 @@ a {
   }
 }
 
-.back-button {
-  position: fixed;
-  top: 30px;
-  margin-left: 0px;
-  padding: 0;
-  z-index: 2;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  &:focus {
-    outline: none;
-  }
-  img {
-    height: 30px;
-  }
-}
-
 @media only screen and (min-width: 450px) {
   h1 {
     font-size: 5rem;
     line-height: .77;
+    margin-top: 100px;
   }
+
   h2 {
     font-size: 3rem;
     line-height: .75;
-
     &::before {
-      counter-increment: section;
+      counter-increment: section 1;
       content: "0" counter(section);
       font-size: 0.625rem;
       font-weight: normal;
@@ -276,12 +233,15 @@ a {
       position: absolute;
     }
   }
+
   .content-body {
-    margin: 65px;
+    margin: 0 65px 65px;
   }
+
   .nav {
-    padding: 0 65px;
+    margin: 50px 65px 0;
   }
+
   .back-button {
     position: fixed;
     top: 75px;
@@ -303,9 +263,11 @@ a {
   h1 {
     font-size: 7rem;
   }
+
   h2 {
     font-size: 4rem;
   }
+
   .about-text {
     display: grid;
     div {
@@ -314,14 +276,49 @@ a {
     p {
       margin-top: 0;
     }
-    
   }
+
+  .nav .nav-link {
+    display: block;
+    margin-top: 1rem;
+    position: relative;
+    &::before {
+      counter-increment: navigation 1;
+      content: "0" counter(navigation);
+      font-size: 0.625rem;
+      font-weight: normal;
+      left: -1rem;
+      position: absolute;
+      color: var(--color-mid);
+      font-family: "Inconsolata", monospace;
+    }
+  }
+
   .svg-container {
     &.svg-bottom {
       display: block;
       bottom: 30%;
       left: -5%;
       transform: scaleX(-1);
+    }
+  }
+
+  .subsection {
+    >div {
+      grid-column: 2 / span 5;
+    }
+    .blog-entries.section {
+      grid-column: 2 / span 7;
+    }
+  }
+
+  .work.section {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-gap: 16px;
+    grid-column: 2 / span 10;
+    div {
+      grid-column-end: span 5;
     }
   }
 }

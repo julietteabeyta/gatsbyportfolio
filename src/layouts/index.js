@@ -14,9 +14,21 @@ const Layout = ({ children, location }) => {
   return (
     <div className="content-container">
       <div className="nav">
-        <Link id="home-nav" to="/">
+        <Link id="home-link" to="/">
           <img id="app-icon" src={jsaIcon} alt="Juliette Icon" />
         </Link>
+        <a className="nav-link" href="#about">
+          About
+        </a>
+        <a className="nav-link" href="#work">
+          Work
+        </a>
+        <a className="nav-link" href="#blog">
+          Blog
+        </a>
+        <a className="nav-link" href="#contact">
+          Contact
+        </a>
         <div className="header-contact">
           <a
             href="https://twitter.com/julietteabeyta"
