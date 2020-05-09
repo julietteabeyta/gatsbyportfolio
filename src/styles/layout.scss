@@ -214,12 +214,27 @@ a {
   width: 70vh;
   position: fixed;
   z-index: -1;
+  &.blue {
+    path {
+      stroke: #00FFFF;
+    }
+  }
+  &.yellow {
+    path {
+      stroke: #FFFF00;
+    }
+  }
+  &.pink {
+    path {
+      stroke: #FF00FF;
+    }
+  }
   svg {
     transform: scale(.5);
   }
   &.svg-top {
-    top: -45%;
-    right: 0;
+    top: -10rem;
+    right: -6rem;
     svg {
       transform: scale(1);
     }
@@ -357,8 +372,8 @@ a {
   .svg-container {
     &.svg-bottom {
       display: block;
-      bottom: 30%;
-      left: -5%;
+      left: -20%;
+      bottom: 7rem;
       transform: scaleX(-1);
     }
   }
