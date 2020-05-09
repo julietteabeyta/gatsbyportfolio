@@ -21,7 +21,7 @@ const Layout = ({ children, location }) => {
           <img className="app-icon" id="blue-icon" src={blueIcon} alt="Juliette Icon" />
           <img className="app-icon" id="pink-icon" src={pinkIcon} alt="Juliette Icon" />
         </Link>
-        {!location.href.includes('blog/') &&
+        {location && location.href && !location.href.includes('blog/') &&
           <>
             <a className="nav-link" href="#about">
               About
