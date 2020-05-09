@@ -3,9 +3,9 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 275.582 340.382" style="enable-background:new 0 0 275.582 340.382;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#FF00FF;stroke-width:0.2449;stroke-miterlimit:10;}
-	.st1{fill:none;stroke:#FFFF00;stroke-width:0.2449;stroke-miterlimit:10;}
-	.st2{fill:none;stroke:#00FFFF;stroke-width:0.2449;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#FF00FF;stroke-width:0.24;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFF00;stroke-width:0.24;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#00FFFF;stroke-width:0.24;stroke-miterlimit:10;}
 </style>
 		<g style="mix-blend-mode: multiply;">
 			<path class="st0" d="M2.486,207.982c-0.081,0.391-0.152,0.796-0.201,1.22c-0.974,8.403,7.851,13.143,14.726,14.834
@@ -2821,7 +2821,7 @@
 				c0.157,1.444,0.236,2.958,0.798,4.316c0.68,1.641,1.966,2.935,3.124,4.243c0.218,0.246,0.431,0.491,0.637,0.737
 				c0.697,0.824,1.281,1.737,1.994,2.546c2.465,2.789,5.889,4.307,9.297,5.611c1.403,0.537,3.62,0.985,4.682,2.11"/>
 		</g>
-		<g style="mix-blend-mode: multiply; margin-left: 2px">
+		<g style="mix-blend-mode: multiply; transform: translateX(1px);">
 			<path class="st2" d="M2.486,207.982c-0.081,0.391-0.152,0.796-0.201,1.22c-0.974,8.403,7.851,13.143,14.726,14.834
 				c6.972,1.714,14.947,1.594,21.181,5.543c3.678,2.33,6.309,6.538,8.434,10.26c0.189,0.331,0.364,0.658,0.528,0.983
 				c0.989,2.023,1.395,4.152,0.613,6.319c-0.726,2.012-2.187,3.706-3.657,5.219c-2.649,2.727-5.622,5.12-8.286,7.835

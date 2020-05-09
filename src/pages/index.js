@@ -7,8 +7,7 @@ import Contact from "../components/contact"
 import About from "../components/about"
 import Work from "../components/work"
 import Blog from "../components/blog"
-import CompiledSvg from '../components/compiledSvg';
-// import wavy from '../images/wavy.svg';
+import wavy from '../images/wavy.svg';
 import get from "lodash/get"
 
 class IndexPage extends React.Component {
@@ -17,8 +16,8 @@ class IndexPage extends React.Component {
     return (
       <>
         <SEO title={'Home'} />
-        <CompiledSvg className="svg-container svg-top" />
-        {/* <ReactSVG src={wavy} className="svg-container svg-top" /> */}
+        {/* <CompiledSvg className="svg-container svg-top" /> */}
+        <ReactSVG src={wavy} className="svg-container svg-top" />
         <div className="content-body home">
           <div className="subsections">
             <div id="about" className="subsection about">
@@ -39,8 +38,8 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-        <CompiledSvg className="svg-container svg-bottom" />
-        {/* <ReactSVG src={wavy} className="svg-container svg-bottom" /> */}
+        {/* <CompiledSvg className="svg-container svg-bottom" /> */}
+        <ReactSVG src={wavy} className="svg-container svg-bottom" />
       </>
     )
   }
