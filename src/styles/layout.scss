@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
 @import url("https://rsms.me/inter/inter.css");
 
+@font-face {
+  font-family: 'Soehne';
+  src: url('./fonts/soehnebreit/soehne-breit-web-extrafett.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/soehnebreit/soehne-breit-web-extrafett.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/soehnebreit/soehne-breit-web-extrafett.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/soehnebreit/soehne-breit-web-extrafett.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
 :root {
   --color-light: #ebeae9;
   --color-mid: #9e9e9e;
@@ -39,6 +47,7 @@ a {
 }
 
 h1, h2 {
+  font-family: 'Soehne', sans-serif;
   span {
     color: #ff00ff;
     mix-blend-mode: multiply;
@@ -64,7 +73,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   position: relative;
   margin-top: 25px;
   padding-bottom: 25px;
@@ -83,11 +92,11 @@ h1 {
 }
 
 .blog h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   position: relative;
   text-transform: uppercase;
   line-height: .8;
@@ -216,7 +225,7 @@ a {
   z-index: -1;
   svg {
     transform: scale(.5);
-    opacity: .55;
+    opacity: .45;
   }
   &.svg-top {
     top: -10rem;
@@ -248,7 +257,7 @@ a {
 @media only screen and (min-width: 450px) {
   h1 {
     font-size: 5rem;
-    line-height: .77;
+    line-height: .75;
     margin-top: 100px;
   }
 
@@ -356,6 +365,9 @@ a {
   }
 
   .svg-container {
+    svg {
+      opacity: .55;
+    }
     &.svg-bottom {
       display: block;
       left: -15rem;
