@@ -225,7 +225,7 @@ a {
   z-index: -1;
   svg {
     transform: scale(.5);
-    opacity: .45;
+    opacity: .4;
   }
   &.svg-top {
     top: -10rem;
@@ -365,9 +365,6 @@ a {
   }
 
   .svg-container {
-    svg {
-      opacity: .55;
-    }
     &.svg-bottom {
       display: block;
       left: -15rem;
