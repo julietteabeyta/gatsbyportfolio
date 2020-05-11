@@ -31,9 +31,9 @@ export default function About() {
           .
         </p>
           <p>
-            In over two years of slinging code, I have gained proficiencies in
+            In my three years of slinging code, I have gained proficiencies in
             various languages, specializing in JavaScript. I love writing
-            scalable, modular applications, and learning & optimizing along the
+            scalable, modular applications, and learning/optimizing along the
             way.
           </p>
           <p>
