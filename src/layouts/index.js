@@ -18,19 +18,19 @@ const Layout = ({ children, location }) => {
   const [visible, setVisible] = useState('');
   const [invisible, setInvisible] = useState('');
 
-  if (window && window.innerWidth > 768) {
-    setTimeout(() => {
-      setVisible('visible');
-    }, 5500);
-    setTimeout(() => {
-      setInvisible('invisible');
-    }, 4000);
-  } else {
-    setTimeout(() => {
-      setVisible('visible');
-    }, 2200);
-  }
   useEffect(() => {
+    if (window && window.innerWidth > 768) {
+      setTimeout(() => {
+        setVisible('visible');
+      }, 5500);
+      setTimeout(() => {
+        setInvisible('invisible');
+      }, 4000);
+    } else {
+      setTimeout(() => {
+        setVisible('visible');
+      }, 2200);
+    }
     anime({
       targets: '.header-svg path',
       strokeDashoffset: [anime.setDashoffset, 0],
