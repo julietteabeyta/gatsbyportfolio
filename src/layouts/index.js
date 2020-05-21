@@ -22,10 +22,10 @@ const Layout = ({ children, location }) => {
     if (window && window.innerWidth > 768) {
       setTimeout(() => {
         setVisible('visible');
-      }, 4900);
+      }, 2500);
       setTimeout(() => {
         setInvisible('invisible');
-      }, 4000);
+      }, 3000);
     } else {
       setTimeout(() => {
         setVisible('visible');
@@ -35,8 +35,7 @@ const Layout = ({ children, location }) => {
       targets: '.header-svg path',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
-      // delay: function (el, i) { return i * 150 },
-      duration: 4100,
+      duration: 2500,
     });
   }, [])
   return (
