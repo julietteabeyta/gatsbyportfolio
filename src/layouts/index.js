@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import anime from 'animejs/lib/anime.es.js';
@@ -18,7 +18,7 @@ const Layout = ({ children, location }) => {
   const [visible, setVisible] = useState('');
   const [invisible, setInvisible] = useState('');
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (window && window.innerWidth > 768) {
       setTimeout(() => {
         setVisible('visible');
@@ -35,8 +35,8 @@ const Layout = ({ children, location }) => {
       targets: '.header-svg path',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
-      delay: function (el, i) { return i * 100 },
-      duration: 2000,
+      delay: function (el, i) { return i * 150 },
+      duration: 1900,
     });
   }, [])
   return (
