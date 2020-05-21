@@ -18,7 +18,7 @@ const Layout = ({ children, location }) => {
   const [visible, setVisible] = useState('');
   const [invisible, setInvisible] = useState('');
 
-  if (window.innerWidth > 768) {
+  if (window && window.innerWidth > 768) {
     setTimeout(() => {
       setVisible('visible');
     }, 5500);
