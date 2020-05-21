@@ -88,6 +88,8 @@ h1 {
     bottom: -25px;
     left: 0;
     background-color: var(--color-neutral);
+    animation: drawIn 2s ;
+    animation-delay: .2s;
   }
 }
 
@@ -123,6 +125,12 @@ a {
 .content-container {
   margin: 0 auto;
   max-width: 800px;
+  opacity: 0;
+  animation: fadeIn 2s ease;
+  animation-delay: .2s;
+  &.visible {
+    opacity: 1;
+  }
 }
 
 .nav {
@@ -173,6 +181,10 @@ a {
     grid-column: 2 / span 9;
 
   }
+}
+
+.header-svg {
+  display: none;
 }
 
 .project {
@@ -237,6 +249,9 @@ a {
   &.svg-bottom {
     display: none;
   }
+  &.visible {
+    opacity: 1;
+  }
 }
 
 .contact img {
@@ -251,6 +266,31 @@ a {
     font-weight: normal;
     color: var(--color-mid);
     font-size: 15px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes drawIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100vw - 35px);
   }
 }
 
@@ -316,8 +356,22 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
+  .content-container {
+    animation-delay: 3.5s;
+  }
   h1 {
     font-size: 7rem;
+    &::after {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: calc(100vw - 35px);
+      bottom: -25px;
+      left: 0;
+      background-color: var(--color-neutral);
+      animation: drawIn 2s ;
+      animation-delay: 3.5s;
+    }
   }
 
   .blog h1 {
@@ -326,6 +380,20 @@ a {
 
   h2 {
     font-size: 4rem;
+  }
+
+  .header-svg {
+    display: block;
+    position: absolute;
+    width: 600px;
+    width: 570px;
+    height: 145px;
+    margin-top: 163px;
+    left: calc(50% - 24rem);
+    &.invisible {
+      opacity: 0;
+      animation: fadeOut 2s ease;
+    }
   }
 
   .about-text {
