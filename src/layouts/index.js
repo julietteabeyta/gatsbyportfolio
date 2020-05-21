@@ -36,7 +36,7 @@ const Layout = ({ children, location }) => {
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
       // delay: function (el, i) { return i * 150 },
-      duration: 1900,
+      duration: 4100,
     });
   }, [])
   return (
