@@ -22,14 +22,14 @@ const Layout = ({ children, location }) => {
     if (window && window.innerWidth > 768) {
       setTimeout(() => {
         setVisible('visible');
-      }, 5200);
+      }, 4900);
       setTimeout(() => {
         setInvisible('invisible');
       }, 4000);
     } else {
       setTimeout(() => {
         setVisible('visible');
-      }, 2000);
+      }, 1900);
     }
     anime({
       targets: '.header-svg path',
