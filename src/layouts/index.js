@@ -35,8 +35,8 @@ const Layout = ({ children, location }) => {
       targets: '.header-svg path',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
-      delay: function (el, i) { return i * 150 },
-      duration: 1900,
+      delay: function (el, i) { return i * 100 },
+      duration: 2000,
     });
   }, [])
   return (
