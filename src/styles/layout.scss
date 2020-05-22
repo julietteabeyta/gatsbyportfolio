@@ -72,31 +72,6 @@ h1, h2 {
   }
 }
 
-h1 {
-  font-size: 3.5rem;
-  position: relative;
-  margin-top: 25px;
-  padding-bottom: 25px;
-  margin-bottom: 60px;
-  text-transform: uppercase;
-  line-height: .8;
-  &::after {
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: calc(100vw - 35px);
-    bottom: -25px;
-    left: 0;
-    background-color: var(--color-neutral);
-    animation: drawIn 2s cubic-bezier(0.645, 0.045, 0.355, 1);
-    animation-delay: .2s;
-  }
-}
-
-.blog h1 {
-  font-size: 2.5rem;
-}
-
 h2 {
   font-size: 2.5rem;
   position: relative;
@@ -130,6 +105,47 @@ a {
   animation-delay: .2s;
   &.visible {
     opacity: 1;
+    h1 {
+      &::after {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: calc(100vw - 35px);
+        bottom: -25px;
+        left: 0;
+        background-color: var(--color-neutral);
+        animation: none;
+      }
+    }
+  }
+  &:not(visible) {
+    h1 {
+      &::after {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: calc(100vw - 35px);
+        bottom: -25px;
+        left: 0;
+        background-color: var(--color-neutral);
+        animation: drawIn 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+        animation-delay: .2s;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    position: relative;
+    margin-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    line-height: .8;
+  }
+
+  .blog h1 {
+    font-size: 2.5rem;
   }
 }
 
@@ -285,14 +301,15 @@ a {
 }
 
 @media only screen and (min-width: 450px) {
-  h1 {
-    font-size: 5rem;
-    line-height: .76;
-    margin-top: 100px;
-  }
-
-  .blog h1 {
-    font-size: 3.2rem;
+  .content-container {
+    h1 {
+      font-size: 5rem;
+      line-height: .76;
+      margin-top: 100px;
+    }
+    .blog h1 {
+      font-size: 3.2rem;
+    }
   }
 
   h2 {
@@ -350,6 +367,44 @@ a {
     animation-delay: 3.8s;
     &.blog-container {
       animation-delay: .2s;
+    }
+    &:not(.visible) {
+      h1 {
+        &::after {
+          content: '';
+          position: absolute;
+          height: 20px;
+          width: calc(100vw - 35px);
+          bottom: -25px;
+          left: 0;
+          background-color: var(--color-neutral);
+          animation: drawIn 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation-delay: 3.8s;
+        }
+      }
+    }
+    &.visible {
+      h1 {
+        &::after {
+          content: '';
+          position: absolute;
+          height: 20px;
+          width: calc(100vw - 35px);
+          bottom: -25px;
+          left: 0;
+          background-color: var(--color-neutral);
+          animation: none;
+        }
+      }
+      .header-svg.show {
+        display: none;
+      }
+    }
+    h1 {
+      font-size: 7rem;
+    }
+    .blog h1 {
+      font-size: 5rem;
     }
   }
 
