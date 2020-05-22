@@ -235,8 +235,6 @@ a {
   width: 70vh;
   position: fixed;
   z-index: -1;
-  opacity: .5;
-  filter: saturate(.5);
   &.wave-top {
     top: -15rem;
     right: -8rem;
