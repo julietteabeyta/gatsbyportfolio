@@ -22,10 +22,10 @@ const Layout = ({ children, location }) => {
     if (window && window.innerWidth > 768) {
       setTimeout(() => {
         setVisible('visible');
-      }, 4500);
+      }, 4000);
       setTimeout(() => {
         setInvisible('invisible');
-      }, 4500);
+      }, 4000);
     } else {
       setTimeout(() => {
         setVisible('visible');
