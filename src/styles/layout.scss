@@ -357,7 +357,7 @@ a {
 
 @media only screen and (min-width: 768px) {
   .content-container {
-    animation-delay: 1.7s;
+    animation-delay: 4s;
   }
   h1 {
     font-size: 7rem;
@@ -370,7 +370,7 @@ a {
       left: 0;
       background-color: var(--color-neutral);
       animation: drawIn 2s cubic-bezier(0.645, 0.045, 0.355, 1);
-      animation-delay: 1.7s;
+      animation-delay: 4s;
     }
   }
 
@@ -382,7 +382,7 @@ a {
     font-size: 4rem;
   }
 
-  .header-svg.show {
+  .header-svg {
     display: block;
     position: absolute;
     width: 600px;
