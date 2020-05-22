@@ -358,7 +358,11 @@ a {
 @media only screen and (min-width: 768px) {
   .content-container {
     animation-delay: 3.8s;
+    &.blog-container {
+      animation-delay: .2s;
+    }
   }
+
   h1 {
     font-size: 7rem;
     &::after {

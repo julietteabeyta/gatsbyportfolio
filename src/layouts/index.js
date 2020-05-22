@@ -18,33 +18,40 @@ const Layout = ({ children, location }) => {
   const [visible, setVisible] = useState('');
   const [invisible, setInvisible] = useState('');
   const [showHeader, setShowHeader] = useState('');
+  const [isBlog, setIsBlog] = useState('');
 
   useLayoutEffect(() => {
-    if (window && window.innerWidth > 768) {
-      setTimeout(() => {
-        setVisible('visible');
-      }, 4500);
-      setTimeout(() => {
-        setInvisible('invisible');
-      }, 4000);
+    if (location && location.href && !location.href.includes('blog/')) {
+      setIsBlog('');
+      if (window && window.innerWidth > 768) {
+        setTimeout(() => {
+          setVisible('visible');
+        }, 4500);
+        setTimeout(() => {
+          setInvisible('invisible');
+        }, 4000);
+      } else {
+        setTimeout(() => {
+          setVisible('visible');
+        }, 1900);
+      }
+      setShowHeader('show');
+      anime({
+        targets: '.header-svg path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        delay: function (el, i) { return i * 150 },
+        duration: 1900,
+      });
     } else {
-      setTimeout(() => {
-        setVisible('visible');
-      }, 1900);
+      setVisible('visible');
+      setIsBlog('blog-container');
     }
-    setShowHeader('show')
-    anime({
-      targets: '.header-svg path',
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: 'easeInOutSine',
-      delay: function (el, i) { return i * 150 },
-      duration: 1900,
-    });
   }, [])
   return (
     <>
       <Header className={`${invisible} header-svg ${showHeader}`} id="header-svg" />
-      <div className={`${visible} content-container`}>
+      <div className={`${visible} content-container ${isBlog}`}>
         <div className="nav">
           <Link id="home-link" to="/">
             <img className="app-icon" id="yellow-icon" src={yellowIcon} alt="Juliette Icon" />
@@ -55,16 +62,16 @@ const Layout = ({ children, location }) => {
             <>
               <a className="nav-link" href="#about">
                 About
-            </a>
+              </a>
               <a className="nav-link" href="#work">
                 Work
-            </a>
+              </a>
               <a className="nav-link" href="#blog">
                 Blog
-            </a>
+              </a>
               <a className="nav-link" href="#contact">
                 Contact
-            </a>
+              </a>
             </>
           }
           <div className="header-contact">
