@@ -229,28 +229,20 @@ a {
   display: inline-block;
 }
 
-.svg-container {
+.wave-container {
   display: block;
-  height: 50vh;
+  height: 90vh;
   width: 70vh;
   position: fixed;
   z-index: -1;
-  svg {
-    transform: scale(.5);
-    opacity: .4;
+  opacity: .5;
+  filter: saturate(.5);
+  &.wave-top {
+    top: -15rem;
+    right: -8rem;
   }
-  &.svg-top {
-    top: -10rem;
-    right: -6rem;
-    svg {
-      transform: scale(1);
-    }
-  }
-  &.svg-bottom {
+  &.wave-bottom {
     display: none;
-  }
-  &.visible {
-    opacity: 1;
   }
 }
 
@@ -436,11 +428,11 @@ a {
     }
   }
 
-  .svg-container {
-    &.svg-bottom {
+  .wave-container {
+    &.wave-bottom {
       display: block;
       left: -15rem;
-      bottom: 7rem;
+      bottom: -15rem;
       transform: scaleX(-1);
     }
   }
