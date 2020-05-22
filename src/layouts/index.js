@@ -21,8 +21,8 @@ const Layout = ({ children, location }) => {
   const [isBlog, setIsBlog] = useState('');
 
   useLayoutEffect(() => {
-    window.onbeforeunload = function () { localStorage.removeItem('loaded'); return ''; };
-    if (location && location.href && !location.href.includes('blog/') && !localStorage.getItem('loaded')) {
+    if (location && location.href && !location.href.includes('blog/')) {
+      // if (location && location.href && !location.href.includes('blog/') && !localStorage.getItem('loaded')) {
       setIsBlog('');
       localStorage.setItem('loaded', true);
       if (window && window.innerWidth > 768) {

@@ -16,8 +16,7 @@ class IndexPage extends React.Component {
     return (
       <>
         <SEO title={'Home'} />
-        {/* <CompiledSvg className="svg-container svg-top" /> */}
-        <ReactSVG src={wavy} className="svg-container svg-top" />
+        {/* <ReactSVG src={wavy} className="svg-container svg-top" /> */}
         <div className="content-body home">
           <div className="subsections">
             <div id="about" className="subsection about">
@@ -38,8 +37,7 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-        {/* <CompiledSvg className="svg-container svg-bottom" /> */}
-        <ReactSVG src={wavy} className="svg-container svg-bottom" />
+        {/* <ReactSVG src={wavy} className="svg-container svg-bottom" /> */}
       </>
     )
   }
