@@ -22,9 +22,7 @@ const Layout = ({ children, location }) => {
 
   useLayoutEffect(() => {
     if (location && location.href && !location.href.includes('blog/')) {
-      // if (location && location.href && !location.href.includes('blog/') && !localStorage.getItem('loaded')) {
       setIsBlog('');
-      localStorage.setItem('loaded', true);
       if (window && window.innerWidth > 768) {
         setTimeout(() => {
           setVisible('visible');
