@@ -31,17 +31,18 @@ const Layout = ({ children, location }) => {
         setVisible('visible');
       }, 1900);
     }
+    document.getElementById('header-svg').classList.add('show');
     anime({
       targets: '.header-svg path',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
-      // delay: function (el, i) { return i * 150 },
+      delay: function (el, i) { return i * 150 },
       duration: 1900,
     });
   }, [])
   return (
     <>
-      <Header className={`${invisible} header-svg`} />
+      <Header className={`${invisible} header-svg`} id="header-svg" />
       <div className={`${visible} content-container`}>
         <div className="nav">
           <Link id="home-link" to="/">
