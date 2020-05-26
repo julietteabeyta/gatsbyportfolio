@@ -3,11 +3,11 @@ import Project from "./project"
 const SecondPage = () => (
   <>
     <Project
-      url="http://crit.fail"
-      title="Initiative"
-      date="05.19-present"
-      description="Initiative is a Table Top RPG companion application with the mission of simplifiying character management and improving gameplay. Quick, seamless access to character sheets mitigate time shuffling through paperwork and leave more time for adventure."
-      tags={["React", "Leadership"]}
+      url="https://tasktracker.juliette.dev"
+      title="That Vue.js Task Tracker Everyone Makes"
+      date="05.20"
+      description="I built this task tracker to familiarize myself with event handling and the full structure of the Vue framework. This is a task management application in which users can create/edit tasks and mark them as completed."
+      tags={["Vue", "Parcel", "SVG"]}
     />
     <Project
       url="https://spacex.juliette.dev"

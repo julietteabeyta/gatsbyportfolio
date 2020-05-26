@@ -1,5 +1,4 @@
 import React from "react"
-import ReactSVG from 'react-svg';
 import { graphql } from 'gatsby';
 
 import SEO from "../components/seo"
