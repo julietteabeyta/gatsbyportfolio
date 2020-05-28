@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import anime from 'animejs/lib/anime.es.js';
@@ -20,7 +20,7 @@ const Layout = ({ children, location }) => {
   const [showHeader, setShowHeader] = useState('');
   const [isBlog, setIsBlog] = useState('');
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (location && location.href && !location.href.includes('blog/')) {
       setIsBlog('');
       if (window && window.innerWidth > 768) {
@@ -47,7 +47,7 @@ const Layout = ({ children, location }) => {
       setVisible('visible');
       setIsBlog('blog-container');
     }
-  }, [])
+  }, [location])
   return (
     <>
       <Header className={`${invisible} header-svg ${showHeader}`} id="header-svg" />

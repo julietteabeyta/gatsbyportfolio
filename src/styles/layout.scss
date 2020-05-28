@@ -85,7 +85,7 @@ h3 {
 }
 
 p {
-  line-height: 1.3;
+  line-height: 1.6;
 }
 
 li {
@@ -494,7 +494,7 @@ a {
     >div {
       grid-column: 2 / span 5;
     }
-    .blog-entries.section {
+    .blog-entries.section, .contact.section {
       grid-column: 2 / span 7;
     }
   }
