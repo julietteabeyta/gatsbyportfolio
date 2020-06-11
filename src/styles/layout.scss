@@ -30,12 +30,15 @@ html {
 }
 
 .blm {
-  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
+  padding: 15px;
   background-color: var(--color-neutral);
   justify-content: center;
   color: var(--color-light);
-  z-index: -1;
+  z-index: 1;
   a {
     color: var(--color-light);
     span {
@@ -173,7 +176,7 @@ a {
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-  margin: 50px 35px 0;
+  margin: 70px 35px 0;
   .nav-link {
     display: none;
   }
@@ -361,7 +364,7 @@ a {
   }
 
   .nav {
-    margin: 50px 65px 0;
+    margin: 70px 65px 0;
   }
 
   .back-button {
@@ -453,10 +456,9 @@ a {
   .header-svg.show {
     display: block;
     position: absolute;
-    width: 600px;
     width: 570px;
     height: 145px;
-    margin-top: 213px;
+    margin-top: 163px;
     left: calc(50% - 24rem);
     &.invisible {
       opacity: 0;
