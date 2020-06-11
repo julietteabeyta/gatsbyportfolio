@@ -50,6 +50,7 @@ const Layout = ({ children, location }) => {
   }, [location])
   return (
     <>
+      <div className="blm"><a href="https://secure.actblue.com/donate/ms_blm_homepage_2019"><span>BLACK LIVES MATTER</span></a> {' '} NO JUSTICE, NO PEACE.</div>
       <Header className={`${invisible} header-svg ${showHeader}`} id="header-svg" />
       <div className={`${visible} content-container ${isBlog}`}>
         <div className="nav">

@@ -29,6 +29,25 @@ html {
   background: #ebeae9;
 }
 
+.blm {
+  padding: 15px;
+  display: flex;
+  background-color: var(--color-neutral);
+  justify-content: center;
+  color: var(--color-light);
+  z-index: -1;
+  a {
+    color: var(--color-light);
+    span {
+      border-bottom: 2px solid var(--color-light);
+    }
+    &::after {
+      content: " ";
+      white-space: pre;
+    }
+  }
+}
+
 body {
   margin: 0px;
   font-size: 1rem;
@@ -437,7 +456,7 @@ a {
     width: 600px;
     width: 570px;
     height: 145px;
-    margin-top: 163px;
+    margin-top: 213px;
     left: calc(50% - 24rem);
     &.invisible {
       opacity: 0;
