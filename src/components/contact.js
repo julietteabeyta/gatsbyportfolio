@@ -8,8 +8,7 @@ import codepen from "../images/codepen.svg"
 const Contact = () => (
   <div className="contact section">
     <p className="conclusion">
-      Thank you so much for stopping by. I am most available on Twitter, but you
-      can check out all of the other places I have been on the internet. Hope to
+      Thank you so much for stopping by. Here are all of the places I have been on the internet. Hope to
       hear from you soon!
     </p>
     <ContactLink
